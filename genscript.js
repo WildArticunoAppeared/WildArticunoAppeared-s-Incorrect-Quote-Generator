@@ -1,7 +1,7 @@
 //Pronouns. Capitalised starts at index 7.
-let malep = ["he", "him", "his", "his", "he's", "he'd", "he'll","He", "Him", "His", "His", "He's", "He'd", "He'll", "s", "is", "Is"]
-let femalep = ["she", "her", "hers", "her", "she's", "she'd", "she'll","She", "Her", "Hers", "Her", "She's", "She'd", "She'll", "s", "is", "Is"]
-let otherp = ["they", "them", "theirs", "their", "they're", "they'd", "they'll","They", "Them", "Theirs", "Their", "They're", "They'd", "They'll", "", "are", "Are"]
+let malep = ["he", "him", "his", "his", "he's", "he'd", "he'll","He", "Him", "His", "His", "He's", "He'd", "He'll", "s", "is", "Is", "f"]
+let femalep = ["she", "her", "hers", "her", "she's", "she'd", "she'll","She", "Her", "Hers", "Her", "She's", "She'd", "She'll", "s", "is", "Is", "f"]
+let otherp = ["they", "them", "theirs", "their", "they're", "they'd", "they'll","They", "Them", "Theirs", "Their", "They're", "They'd", "They'll", "", "are", "Are", "ves"]
 //Init
 let n1 = "Person A";
 let p1 = otherp;
@@ -237,19 +237,22 @@ function generateQuote() {
     quote = getQuote(choice);
     switch(parseInt(choice[0])) {
         case 1:
-            choice[1] = Math.floor(Math.random() * 16);
+            choice[1] = Math.floor(Math.random() * 27);
         break;
         case 2:
-            choice[1] = Math.floor(Math.random() * 29);
+            choice[1] = Math.floor(Math.random() * 43);
         break;
         case 3:
-            choice[1] = Math.floor(Math.random() * 6);
+            choice[1] = Math.floor(Math.random() * 11);
         break;
         case 4:
-            choice[1] = Math.floor(Math.random() * 6);
+            choice[1] = Math.floor(Math.random() * 8);
         break;
         case 5:
-            choice[1] = Math.floor(Math.random() * 3);
+            choice[1] = Math.floor(Math.random() * 5);
+        break;
+        case 6:
+            choice[1] = Math.floor(Math.random() * 1);
         break;
         case 7:
             choice[1] = Math.floor(Math.random() * 1);
@@ -350,10 +353,32 @@ function getQuote(choices) {
                 case 13: 
                     return "<b>" + n1 + ":</b> They call me 7 Knives... because that's knives it takes me to cook things because I keep putting 'em in the sink without thinking about it."
                 case 14:
-                    return "<b>" + n1 + ", looking at their reflection in the mirror:</b> I'm so relevant and beautiful."
+                    return "<b>" + n1 + ", looking at " + p1[3] + " reflection in the mirror:</b> I'm so relevant and beautiful."
                 case 15:
                     return "<b>" + n1 + ":</b> How much dirt do you have to throw in the ocean to make a new country?"
-                
+                case 16:
+                    return "*The phone is ringing.*<br><b>" + n1 + ":</b> No."
+                case 17:
+                    return "<b>" + n1 + ":</b> Daylight Savings? You're telling me daylight saved this time?"
+                case 18:
+                    return "<b>" + n1 + ", softly:</b> For fuck's sake..."
+                case 19:
+                    return n1 + " watches a kid fall over.<br><b>" + n1 + ", under " + p1[3] + " their breath:</b> Get rekt."
+                case 20:
+                    return "<b>" + n1 + ":</b> I expect I'll be able to solve a lot of problems once my baby brain falls out and my adult brain grows in."
+                case 21:
+                    return "Two consecutive videos on " + n1 + "'s channel:<br><b>" + n1 + ":</b> What does fuck mean?<br><b>" + n1 + ":</b> Fuck whoever disliked my video!"
+                case 22:
+                    return "<b>" + n1 + ":</b> Don't bring anything to a knife fight?<br><b>" + n + ":</b> In fact, don't even go - everyone there has knives!"
+                case 23:
+                    return "<b>" + n1 + ":</b> Imagine how smart I would seem if I was in kindergarten knowing everything I know now! I'd be a genius!"
+                case 24:
+                    return "<b>" + n1 + ":</b> I love it when teachers put question marks on my tests because I'm just like \"Yeah, same!\""
+                case 25:
+                    return "<b>" + n1 + ":</b> I'm not having a Baja Blast right now...<br><b>" + n1 + ":</b> I'm having a Crunch Wrap Supreme-ly difficult time."
+                case 26:
+                    return "<b>" + n1 + ":</b> It's " + n1 + "-in' time!<br>*" + n1 + " proceeds to " + n1 + " all over the place.*"
+
             }
         case 2:
             switch(parseInt(choices[1])) {
@@ -415,7 +440,34 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> Why is everything blue?<br><b>" + n2 + ":</b> Could you perhaps elaborate?<br><b>" + n1 + ":</b> Everything is blue. I see no need for elaboration."
                 case 28:
                     return "<b>" + n1 + ":</b> PTSD? You got Pussy Taste Speldiferous Disorder?<br><b>" + n2 + ":</b> I don't even know to respond.<br><b>" + n2 + ":</b><br><b>" + n2 + ":</b> You know what? Yes, I <i>do</i> have Pussy Taste Speldiferous Disorder."
-                
+                case 29:
+                    return "<b>" + n1 + ":</b> How about respecting worms?<br><b>" + n2 + ", picking a worm up from the footpath and putting it in the mud:</b> A soggy boy is a happy boy."
+                case 30:
+                    return "<b>" + n1 + ":</b> I'm so upset...<br><b>" + n2 + ":</b> Why? What happened?<br><b>" + n1 + ":</b> Shut the fuck up.<br><b>" + n2 + ":</b> Well fuck you then. You can stay upset. In fact, I hope your day gets <i>worse!</i>"
+                case 31:
+                    return "<b>" + n1 + ":</b> You're my dream, " + n2 + "...<br><b>" + n2 + ":</b> No I'm not. Shut up!<br><b>" + n1 + ":</b> I never said what kind of dream, though.<br><b>" + n1 + ":</b> You fucking nightmare."
+                case 32:
+                    return "<b>" + n1 + ":</b> What movie is this?<br><b>" + n2 + ":</b> \"I Love You, Man\".<br><b>" + n1 + ":</b> I love you too, but seriously, what's the movie called?<br><b>" + n2 + ":</b> \"I LOVE YOU, MAN\"!<br><b>" + n1 + ":</b> I LOVE YOU TOO, BRO!"
+                case 33:
+                    return "<b>" + n1 + ":</b> Are you ready for tomorrow's history text?<br><b>" + n2 + ":</b> Yeah.<br><b>" + n1 + ":</b> What ended in 1896?<br><b>" + n2 + ":</b> Uh... 1895!<br><b>" + n1 + ":</b> Yeah, you're totally ready."
+                case 34:
+                    return "<b>" + n1 + ":</b> It costs $400 to see a therapist.<br><b>" + n1 + ":</b> But it's free to just tell yourself, \"It be like that sometimes.\"<br><b>" + n2 + ":</b> What!? No-"
+                case 35:
+                    return "<b>" + n1 + ":</b> Aren't you supposed to be asleep?<br><b>" + n2 + ":</b> I'm supposed to be a lot of things, but I live to disappoint."
+                case 36:
+                    return "<b>" + n1 + ":</b> You fucked up!<br><b>" + n2 + ":</b> I don't know what you're referring to, but probably."
+                case 37:
+                    return "<b>" + n1 + ":</b> Sorry I just rear-ended you, " + n2 + "... but I just hate you so fucking much!"
+                case 38:
+                    return "<b>" + n1 + ":</b> I thought \"happiness\" started with a 'h'... so why does mine start with 'u'?<br><b>" + n2 + ":</b> I think you have dyslexia..."
+                case 39:
+                    return "<b>" + n1 + ":</b> So, let's start by talking about the emotions you guys are feeling right now.<br><b>" + n2 + ":</b> Stabbing.<br><b>" + n1 + ":</b> Stabbing isn't an emotion. It's more of an activity that I hope you don't do to me.<br><b>" + n1 + ":</b> See an emotion is more of a feeling-<br><b>" + n2 + ":</b> Well maybe I feel stabby!"
+                case 40:
+                    return "<b>" + n1 + ":</b> Could you possibly get any more annoying?<br><b>" + n2 + ":</b> Easily!"
+                case 41:
+                    return "<b>" + n1 + ":</b> ♪ Can we pretend that aeroplanes in the night sky are like shooting stars? ♫<br><b>" + n2 + ":</b> ♫ I could really use a wish right now, wish right now, wish right now... ♪"
+                case 42:
+                    return "<b>" + n1 + ":</b> ZZZZZZWZWZWZZZAAZWHHHHZZZZZAAZWWAAZKADJASKLJAAKSALFJSDKLJSDK<br><b>" + n2 + ", afraid, with tears in " + p2[3] + " eyes:</b> Don't say that..."
             }
         case 3:
             switch(parseInt(choices[1])) {
@@ -431,6 +483,17 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> I lived, bitch.<br><b>" + n2 + ":</b> I loved, bitch.<br><b>" + n3 + ":</b> I laughed, bitch."
                 case 5:
                     return "<b>" + n1 + ":</b> If you wake up much earlier than normal, you feel secret emotions.<br><b>" + n2 + ":</b> One time, I woke up at 7am and stared at the sunrise for like an hour. I don't know what those emotions were but they sure were a lot.<br><b>" + n3 + ":</b> If you stay up late enough, you feel the same emotions, but the bad version of them."
+                case 6:
+                    return "<b>" + n1 + ":</b> Ew, I hate bugs. They're so gross.<br><b>" + n + ":</b> What did you say about bugs!?<br><b>" + n + ":</b> " + n3 + ", hold my flower!<br><b>" + n + ", taking " + n2 + "'s flower:</b> Kick " + p1[3] + " ass, " + n2 + "! I've got your flower!"
+                case 7:
+                    return "<b>" + n1 + ":</b> Don't you miss " + n2 + "?<br><b>" + n3 + ":</b> Nope, not at all!<br><b>" + n1 + ":</b> Take off your sunglasses.<br>*" + n3 + " takes off " + p3[3] + " sunglasses, revealing that " + p3[0] + " " + p3[15] + " in tears."
+                case 8:
+                    return "*" + n1 + "posts two selfies of " + p1[0] + "sel" + p1[17] + " in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n + ":</b> This isn't about " + p3[1] + "."
+                case 9:
+                    return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[1] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> FUCK OFF!"
+                case 10:
+                    return "<b>" + n1 + ":</b> I ship " + n2 + " and " + n3 + "...<br><b>" + n2 + " and " + n3 + ":</b> Please no-<br><b>" + n1 + ":</b> With therapy!<br><b>" + n2 + " and " + n3 + ":</b>..."
+                
             }
         case 4:
             switch(parseInt(choices[1])) {
@@ -446,16 +509,31 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> When will Ted himself... finally show up to the Talk?<br><b>" + n2 + ":</b> The final boss!<br><b>" + n3 + ":</b> You guys know that TED Talks stands for \"Technology, Education and Design Talks\", right?<br><b>" + n4 + ":</b> I will not let Ted hide behind these lies any longer!"
                 case 5:
                     return "<b>" + n1 + ":</b> What kind of power move could I make towards my new therapist?<br><b>" + n2 + ":</b> Get a notepad and take notes whenever they take notes!<br><b>" + n3 + ":</b> Eat the paper at the end of the session!<br><b>" + n4 + ":</b> This is why you're all in therapy."
-                
+                case 6:
+                    return "<b>" + n1 + ":</b> You've heard of \"be gay, do crimes\", now get ready for \"be trans, throw hands\"!<br><b>" + n2 + ":</b> Be queer, instill fear!<br><b>" + n3 + ":</b> Be bi, go for the eye!<br><b>" + n4 + ":</b> Be ace, punch face!"
+                case 7:
+                    return "<b>" + n1 + ":</b> It's okay to ask for help.<br><b>" + n2 + ":</b> You're not a burden.<br><b>" + n3 + ":</b> Murder is okay.<br><b>" + n4 + ":</b> Your feelings matter."
+
             }
         case 5:
             switch(parseInt(choices[1])) {
+                default:
+                    return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma fuck you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U"
                 case 1:
                     return "<b>" + n1 + ":</b> Let's play Kiss Marry Kill!<br><b>" + n1 + ":</b> First, who would you kill?<br><b>" + n2 + ":</b> *points at " + n5 + ".<br><b>" + n3 + ":</b> *points at " + n5 + ".<br><b>" + n4 + ":</b> *points at " + n5 + ".<br><b>" + n5 + ":</b> *shrugs* I would kill me, too."
                 case 2:
                     return "<b>" + n1 + ":</b> Why aren't there friend pick up lines? Pick up lines for making friends, like-<br><b>" + n1 + ", to " + n2 + ":</b> Hey, that's a cool outfit. You know where it would look better? Nowhere else, because you're an awesome individual!<br><b>" + n3 + ", to " + n4 + ":</b> Be my friend or I'll set your entire family on fire!<br><b>" + n5 + ":</b> There are two types of people."
+                case 3:
+                    return "The Squad's reactions to being told that they suck at a video game:<br><b>" + n1 + ":</b> Please be nice to me... I'm trying!<br><b>" + n2 + ":</b> Sorry, I don't play this game much.<br><b>" + n3 + ":</b> You're uninvited from my birthday party!<br><b>" + n4 + ":</b> Sorry, it's just so hard to play with your mum sitting on my face.<br><b>" + n5 + ":</b> Your IP and GT have been sent to Microsoft's fraud department along with a recommendation to impose a $10,000 fine and up to six months in jail."
+                case 4:
+                    return "The Squad's reactions to being invited to a cult:<br><b>" + n1 + ":</b> No!? What the fuck is wrong with you!?<br><b>" + n2 + ":</b> Thanks for the offer, but please don't ever talk to me again.<br><b>" + n3 + ":</b> What do you have to offer?<br><b>" + n4 + ":</b> Where do I sign up?<br><b>" + n5 + ":</b> Sorry, but I already have one."
+                
+            }
+        case 6:
+            switch(parseInt(choices[1])) {
                 default:
-                    return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma fuck you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U"
+                    return "*A child starts crying in public.<br><b>" + n1 + ":</b> *tries to make the child laugh*<br><b>" + n2 + ":</b> *tries playing with the child to calm them down*<br><b>" + n3 + ":</b> *gives advice to the parents*<br><b>" + n4 + ":</b> *cries with the child*<br><b>" + n5 + ":</b> *ignore the child*<br><b>" + n6 + ":</b> *is the reason why the child is crying*"
+                
             }
         case 7:
             switch(parseInt(choices[1])){
