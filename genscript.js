@@ -363,7 +363,7 @@ function getQuote(choices) {
                 case 18:
                     return "<b>" + n1 + ", softly:</b> For fuck's sake..."
                 case 19:
-                    return n1 + " watches a kid fall over.<br><b>" + n1 + ", under " + p1[3] + " their breath:</b> Get rekt."
+                    return "*" + n1 + " watches a kid fall over.*<br><b>" + n1 + ", under " + p1[3] + " breath:</b> Get rekt."
                 case 20:
                     return "<b>" + n1 + ":</b> I expect I'll be able to solve a lot of problems once my baby brain falls out and my adult brain grows in."
                 case 21:
@@ -488,11 +488,11 @@ function getQuote(choices) {
                 case 7:
                     return "<b>" + n1 + ":</b> Don't you miss " + n2 + "?<br><b>" + n3 + ":</b> Nope, not at all!<br><b>" + n1 + ":</b> Take off your sunglasses.<br>*" + n3 + " takes off " + p3[3] + " sunglasses, revealing that " + p3[0] + " " + p3[15] + " in tears."
                 case 8:
-                    return "*" + n1 + "posts two selfies of " + p1[0] + "sel" + p1[17] + " in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n1 + ":</b> This isn't about " + p3[1] + "."
+                    return "*" + n1 + " posts two selfies of " + p1[0] + "sel" + p1[17] + " in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n1 + ":</b> This isn't about " + p3[1] + "."
                 case 9:
                     return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[1] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> FUCK OFF!"
                 case 10:
-                    return "<b>" + n1 + ":</b> I ship " + n2 + " and " + n3 + "...<br><b>" + n2 + " and " + n3 + ":</b> Please no-<br><b>" + n1 + ":</b> With therapy!<br><b>" + n2 + " and " + n3 + ":</b>..."
+                    return "<b>" + n1 + ":</b> I ship " + n2 + " and " + n3 + "...<br><b>" + n2 + " and " + n3 + ":</b> Please no-<br><b>" + n1 + ":</b> With therapy!<br><b>" + n2 + " and " + n3 + ":</b> ..."
                 
             }
         case 4:
