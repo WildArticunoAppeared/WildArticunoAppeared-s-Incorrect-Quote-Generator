@@ -369,7 +369,7 @@ function getQuote(choices) {
                 case 21:
                     return "Two consecutive videos on " + n1 + "'s channel:<br><b>" + n1 + ":</b> What does fuck mean?<br><b>" + n1 + ":</b> Fuck whoever disliked my video!"
                 case 22:
-                    return "<b>" + n1 + ":</b> Don't bring anything to a knife fight?<br><b>" + n + ":</b> In fact, don't even go - everyone there has knives!"
+                    return "<b>" + n1 + ":</b> Don't bring anything to a knife fight?<br><b>" + n1 + ":</b> In fact, don't even go - everyone there has knives!"
                 case 23:
                     return "<b>" + n1 + ":</b> Imagine how smart I would seem if I was in kindergarten knowing everything I know now! I'd be a genius!"
                 case 24:
@@ -484,11 +484,11 @@ function getQuote(choices) {
                 case 5:
                     return "<b>" + n1 + ":</b> If you wake up much earlier than normal, you feel secret emotions.<br><b>" + n2 + ":</b> One time, I woke up at 7am and stared at the sunrise for like an hour. I don't know what those emotions were but they sure were a lot.<br><b>" + n3 + ":</b> If you stay up late enough, you feel the same emotions, but the bad version of them."
                 case 6:
-                    return "<b>" + n1 + ":</b> Ew, I hate bugs. They're so gross.<br><b>" + n + ":</b> What did you say about bugs!?<br><b>" + n + ":</b> " + n3 + ", hold my flower!<br><b>" + n + ", taking " + n2 + "'s flower:</b> Kick " + p1[3] + " ass, " + n2 + "! I've got your flower!"
+                    return "<b>" + n1 + ":</b> Ew, I hate bugs. They're so gross.<br><b>" + n2 + ":</b> What did you say about bugs!?<br><b>" + n2 + ":</b> " + n3 + ", hold my flower!<br><b>" + n3 + ", taking " + n2 + "'s flower:</b> Kick " + p1[3] + " ass, " + n2 + "! I've got your flower!"
                 case 7:
                     return "<b>" + n1 + ":</b> Don't you miss " + n2 + "?<br><b>" + n3 + ":</b> Nope, not at all!<br><b>" + n1 + ":</b> Take off your sunglasses.<br>*" + n3 + " takes off " + p3[3] + " sunglasses, revealing that " + p3[0] + " " + p3[15] + " in tears."
                 case 8:
-                    return "*" + n1 + "posts two selfies of " + p1[0] + "sel" + p1[17] + " in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n + ":</b> This isn't about " + p3[1] + "."
+                    return "*" + n1 + "posts two selfies of " + p1[0] + "sel" + p1[17] + " in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n1 + ":</b> This isn't about " + p3[1] + "."
                 case 9:
                     return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[1] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> FUCK OFF!"
                 case 10:
