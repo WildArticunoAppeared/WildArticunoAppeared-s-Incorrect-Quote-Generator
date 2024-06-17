@@ -241,61 +241,61 @@ function applyNumber() {
 
 function generateQuote() {
     choice[0] = document.getElementById("numberofpeople").value;
-    choice[1] = 0;
+    choice[1] = -1;
     if (parseInt(choice[0]) == 11) {
         choice[0] = Math.floor(Math.random() * 10) + 1;
     }
     getCensoredQuotes();
     switch(parseInt(choice[0])) {
         case 1:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 40);
             }
         break;
         case 2:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 57);
             }
         break;
         case 3:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 13);
             }
         break;
         case 4:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 10);
             }
         break;
         case 5:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 7);
             }
         break;
         case 6:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
         break;
         case 7:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
         break;
         case 8:
             choice[0] = 7;
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
         break;
         case 9:
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
         break;
         case 10:
             choice[0] = 9;
-            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] == 0) {
+            while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
         break;
