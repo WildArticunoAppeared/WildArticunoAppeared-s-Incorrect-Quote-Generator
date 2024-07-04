@@ -94,28 +94,39 @@
     <div class="texts" id="censoring">
         <p class="centre"><span id="intro"><b>Filtering Options:</b></span><br><span id="smalltext">Changes to filters only apply when generating new quotes, but censoring/uncensoring swear words also applies when updating names for most quotes.</span></p>
         
-        <input type="checkbox" id="swearing" onchange="toggleCensors()">
-        <label for="swearing">Censor swear words (also filters quotes about swearing).</label><br>
-        <input type="checkbox" id="crudeitems" onchange="toggleCensors()">
-        <label for="crudeitems">Crude humour (such as mentions of genitalia)</label><br>
-        Shipping filter: <br>
-        <input type="radio" name="shippinglevel" value="none" checked="true">
-        <label for="none">No filtering</label><br>
-        <input type="radio" name="shippinglevel" value="moderate">
-        <label for="moderate">Moderate filtering</label><br>
-        <input type="radio" name="shippinglevel" value="strict">
-        <label for="strict">Strict filtering</label><br>
+        <div id="filterboxescol1">
+            <input type="checkbox" id="swearing" onchange="toggleCensors()">
+            <label for="swearing">Censor swear words (also filters quotes about swearing)</label><br>
+            <input type="checkbox" id="crudeitems" onchange="toggleCensors()">
+            <label for="crudeitems">Crude humour (such as mentions of genitalia)</label><br>
+            Shipping filter:<br>
+            <input type="radio" name="shippinglevel" value="none" checked="true">
+            <label for="none">No filtering</label><br>
+            <input type="radio" name="shippinglevel" value="moderate">
+            <label for="moderate">Moderate filtering</label><br>
+            <input type="radio" name="shippinglevel" value="strict">
+            <label for="strict">Strict filtering</label><br>
+        </div>
+        <div id="filterboxescol2">
+            <input type="checkbox" id="suicide" onchange="toggleCensors()">
+            <label for="suicide">Quotes about/mentioning suicide</label><br>
+            <input type="checkbox" id="drugs" onchange="toggleCensors()">
+            <label for="drugs">Drug use</label><br>
+            <input type="checkbox" id="sexual" onchange="toggleCensors()">
+            <label for="sexual">Sexual content</label><br>
+        </div>
+        <div class="divend"></div>
     </div>
     <div class="texts" id="info">
         <p id="intro"><b>Yet another incorrect quote generator! Now with retroactively changeable names and pronouns!</b></p>
         <p>This incorrect quote generator has been created with the ability to change the names and pronouns in mind. Have you ever got a quote where a different set of characters than the ones you put in would've been more suitable? Or did you put the characters in in the wrong order? Well, with this one, all you have to do is change the names and pronouns and then click <span class="blueglow">Update Names</span>! The quote will remain the same, but the names and pronouns will be changed.</p>
-        <p>The quotes included in this generator are from memes, Tumblr, Twitter, other incorrect quote generators, YouTubers Luke Correia, Jeany Collects and Nyctomatter and YouTuber Admiral Adorable's OMORI meme dubs.</p>
+        <p>The quotes included in this generator are from memes, Discord, Tumblr, Twitter, other incorrect quote generators, YouTubers Luke Correia, Jeany Collects and Nyctomatter and YouTuber Admiral Adorable's OMORI meme dubs.</p>
         <p class="centre"><b>Current number of quotes:</b>
             <table>
-                <tr><th>One character :</th><td>40</td></tr>
-                <tr><th>Two characters :</th><td>57</td></tr>
-                <tr><th>Three characters :</th><td>13</td></tr>
-                <tr><th>Four characters :</th><td>10</td></tr>
+                <tr><th>One character :</th><td>67</td></tr>
+                <tr><th>Two characters :</th><td>90</td></tr>
+                <tr><th>Three characters :</th><td>28</td></tr>
+                <tr><th>Four characters :</th><td>13</td></tr>
                 <tr><th>Five characters :</th><td>7</td></tr>
                 <tr><th>Six characters :</th><td>1</td></tr>
                 <tr><th>Seven characters :</th><td>1</td></tr>
