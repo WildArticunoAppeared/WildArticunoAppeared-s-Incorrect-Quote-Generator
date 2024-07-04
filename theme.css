@@ -66,3 +66,18 @@ table {
     size: 0;
     font-size: 0;
 }
+#smalltext {
+    font-size: 75%;
+}
+
+#filterboxescol1 {
+    width: 50%;
+    float: left;
+}
+#filterboxescol2 {
+    width: 50%;
+    float: left;
+}
+.divend {
+    clear: both;
+}
