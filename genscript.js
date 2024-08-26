@@ -27,14 +27,15 @@ let choice = [1,0];
 let quote = "Your quote here.";
 let noswearing = false;
 let censoredquotes = [];
-let swearquotes = [[21],[],[],[],[],[],[],[],[],[]]; //noswearing
-let filters = [false, false, false, false];
+let swearquotes = [[21,33],[],[],[],[],[],[],[],[],[]]; //noswearing
+let filters = [false, false, false, false, false];
 let crudequotes = [[],[6,28,51,57],[],[],[],[],[],[],[],[]]; //Filter Index: 0
-let shipquotesmoderate = [[],[8,47,86],[12,15],[1],[],[],[],[],[],[]]; //Shipping Level
-let shipquotesstrict = [[37,59,62],[18,25,31,32,38,41,71],[10,16],[],[1],[],[],[],[],[]]; //Shipping Level
+let shipquotesmoderate = [[],[8,47,86,96],[12,15],[1],[],[],[],[],[],[]]; //Shipping Level
+let shipquotesstrict = [[37,59,62,73],[18,25,31,32,38,41,71,97],[10,16],[],[1],[],[],[],[],[]]; //Shipping Level
 let suicidequotes = [[40],[],[],[],[],[],[],[],[],[]]; //Filter Index: 1
-let drugquotes = [[],[69],[],[],[],[],[],[],[],[]]; //Filter Index: 2
+let drugquotes = [[],[69,99],[],[],[],[],[],[],[],[]]; //Filter Index: 2
 let sexualquotes = [[],[59,80],[15],[],[],[],[],[],[],[]]; //Filter Index: 3
+let mentalquotes = [[44],[102],[],[],[],[],[],[],[],[]]; //Filter Index: 4
 
 function applyNumber() {
     number = parseInt(document.getElementById("numberofpeople").value);
@@ -245,24 +246,24 @@ function applyNumber() {
 function generateQuote() {
     choice[0] = document.getElementById("numberofpeople").value;
     choice[1] = -1;
-    if (parseInt(choice[0]) == 11) {
+    if (parseInt(choice[0]) == 11 || parseInt(choice[0] == 8)) {
         choice[0] = Math.floor(Math.random() * 10) + 1;
     }
     getCensoredQuotes();
     switch(parseInt(choice[0])) {
         case 1:
             while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
-                choice[1] = Math.floor(Math.random() * 67);
+                choice[1] = Math.floor(Math.random() * 76);
             }
         break;
         case 2:
             while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
-                choice[1] = Math.floor(Math.random() * 90);
+                choice[1] = Math.floor(Math.random() * 104);
             }
         break;
         case 3:
             while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
-                choice[1] = Math.floor(Math.random() * 28);
+                choice[1] = Math.floor(Math.random() * 33);
             }
         break;
         case 4:
@@ -297,7 +298,6 @@ function generateQuote() {
             }
         break;
         case 10:
-            choice[0] = 9;
             while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
                 choice[1] = Math.floor(Math.random() * 1);
             }
@@ -397,7 +397,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> In this essay, I won't.<br><b>" + n1 + ":</b> Fuck you for coming to my TED Talk."
                     }
                 case 11:
-                    if (noswearing = true) {
+                    if (noswearing == true) {
                         return "<b>" + n1 + ":</b> I hate it when people call fidgety stuff a \"nervous habit\". I'm bouncing my leg because I'm bored, not because I'm a scared little wimp!"
                     } else {
                         return "<b>" + n1 + ":</b> I hate it when people call fidgety stuff a \"nervous habit\". I'm bouncing my leg because I'm bored, not because I'm a scared little bitch!"
@@ -465,7 +465,7 @@ function getQuote(choices) {
                 case 38: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Time for some ominous positivity!<br><b>" + n1 + ":</b> You will be okay. You have no choice.<br><b>" + n1 + ":</b> Everything will turn out fine. You cannot stop it.<br><b>" + n1 + ":</b> You will succeed. It is inevitable.<br><b>" + n1 + ":</b> Better days are already coming. It is too late now."
                 case 39: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Manga lied to me! I never see bad boy types picking up stray kittens, therefore revealing their soft side! It's always <i>me</i> picking up the cats!<br><b>" + n1 + ":</b><br><b>" + n1 + ":</b>Maybe... I'm the bad boy?"
+                    return "<b>" + n1 + ":</b> Manga lied to me! I never see bad boy types picking up stray kittens, therefore revealing their soft side! It's always <i>me</i> picking up the cats!<br><b>" + n1 + ":</b><br><b>" + n1 + ":</b> Maybe... I'm the bad boy?"
                 case 40: //Filter: Quotes about suicide ..... Credit: Me lol. I made this one up myself.
                     return "<b>" + n1 + ":</b> Suicide hotlines? I don't need any suicide hotlines... I'm so scared of dying that I can't even <i>try</i> to kill myself!"
                 case 41: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -474,12 +474,12 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> I'm about to utter some strong language!<br><b>" + n + ":</b> Flexing! Muscles! Sit-ups! Abs! Lifting weights! Push-ups! Physical activity! Running! Football! Biceps!"
                 case 43: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ", sobbing:</b> I got one miss on a rhythm game!"
-                case 44: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> What are your adjectives?<br><b>" + n2 + ":</b> You mean my pronouns?<br><b>" + n1 + ":</b> I already know what your pronouns are. What are your adjectives?<br><b>" + n2 + ":</b> Uh, I dunno. What are yours?<br><b>" + n1 + ":</b> NOISY AND CHAOTIC!<br><b>" + n2 + ":</b> Wow, I've never had something go from making no sense to complete sense so fast..."
+                case 44: // Filter: Mental Health ..... Credit: Me lol. I made this one myself.
+                    return "<b>" + n1 + ":</b> How about feeding the starving children in Africa instead of using their plight to guilt-trip me over my mental illness!"
                 case 45: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> The term \"struggle with depression\" would almost seem to imply that I am bad at depression. But I am, in fact, very proficient at being depressed."
                 case 46: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Right now, I'm trying to maintain my swagful whimsy and optimision in the face of an anti-whimsy society."
+                    return "<b>" + n1 + ":</b> Right now, I'm trying to maintain my swagful whimsy and optimism in the face of an anti-whimsy society."
                 case 47: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I eat 15 apples for breakfast then drive myself to the hospital just to watch the doctors get blasted into the walls because they can't withstand my aura!"
                 case 48: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -529,13 +529,34 @@ function getQuote(choices) {
                 case 62: //Filter: Shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Here's a cute date idea; We go to a botanical garden, you point out a flower and I immediately eat it!"
                 case 63: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Dermatologists HATE " + p1[1] + "! Scientists FEAR " + p1[1] + "! Hardened soldiers TREMBLE under " + p1[1] + " gaze! God DID NOT CREATE " + p1[1].toUpperCase() + " and " + p1[0] + " WILL TEAR THROUGH REALITY'S FABRIC!"
+                    return "<b>" + n1 + ":</b> Dermatologists HATE " + p1[1] + "! Scientists FEAR " + p1[1] + "! Hardened soldiers TREMBLE under " + p1[3] + " gaze! God DID NOT CREATE " + p1[1].toUpperCase() + " and " + p1[0] + " WILL TEAR THROUGH REALITY'S FABRIC!"
                 case 64: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I hate when people ask me \"What did you do today?\"! Listen, I woke up at noon and then it was 5 PM, okay? I don't know!"
                 case 65: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> My personality issues can be directly traced to the fact that I couldn't do the monkey bars as a child."
                 case 66: // Credit: Found on Discord
                     return "<b>" + n1 + ":</b> Do not interact with me if you hate Windows XP and 7. You are not joymaxxing or whimsypilled!"
+                case 67: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ", holding a gun:</b> Oh, this? It heals, but in reverse!"
+                case 69: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ", sobbing:</b> I'm not even a third wheel because I don't have two friends..."
+                case 70: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ", struggling to stay awake:</b> I'm like... four days past my bedtime..."
+                case 71: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> Please do not interact with me if you're me from the mirror world.<br><b>" + n1 + " from the mirror world:</b> Hi.<br><b>" + n1 + ":</b> Why you-"
+                case 72: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> I am NOT adorable! I am pure terror! I MAKE PEOPLE SHAKE IN FEAR!"
+                case 73: // Filter: Shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> Shut up.<br><b>" + n1 + ":</b> Not in a rude way. Just shut up in a gentle way...<br><b>" + n1 + ":</b> Shut up... darling...?"
+                case 74: // Credit: Me lol. I made this one myself
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> Yikes... I swear at least half of these stories are about people who pry too hard and get all shocked and disgusted when they succssfully force the answer out of whoever they're being a meanie to."
+                    } else {
+                        return "<b>" + n1 + ":</b> Yikes... I swear at least half of these stories are about people who pry too hard and get all shocked and disgusted when they succssfully force the answer out of whoever they're being a dick to."
+                    }
+                case 75: //Filter: Quotes about Swearing ..... Credit: Angry Video Game Nerd
+                    return "<b>" + n1 + ":</b> Man, it's just a pile of cunt, fuck, shit, fuck... cunt... Fuck.<br><b>" + n1 + ":</b> Goddamn it. I just said \"Fuck!\" from the bottom of my heart and I said every curse that there is. There's nothin' left.<br><b>" + n1 + ":</b> So you know what? Somebody's gotta invent a new curse word.<br><b>" + n1 + ":</b> ...I think I got it. These things... these <i>fucking</i> things... are [CENSORED]!<br><b>"
+                
             }
         case 2:
             switch(parseInt(choices[1])) {
@@ -687,9 +708,9 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> Why can't you hear a pterodactyl going to the bathroom?<br><b>" + n2 + ":</b> *sighs* Because the 'p' is silent?<br><b>" + n1 + ":</b> No.<br><b>" + n1 + ":</b> Because it's dead."
                 case 49: // Credit: Admiral Adorable's OMORI Meme Dubs
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> Holy crap, did that just happen!?<br><b>" + n2 + ":</b> No, you moron.<br><b>" + n1 + ":</b> I'm not Mormon, you fuck!"
+                        return "<b>" + n1 + ":</b> Holy crap, did that just happen!?<br><b>" + n2 + ":</b> No, you moron.<br><b>" + n1 + ":</b> I'm not Mormon, you freak!"
                     } else {
-                        return "<b>" + n1 + ":</b> Holy shit, did that just happen!?<br><b>" + n2 + ":</b> No, you moron.<br><b>" + n1 + ":</b> I'm not Mormon, you freak!"
+                        return "<b>" + n1 + ":</b> Holy shit, did that just happen!?<br><b>" + n2 + ":</b> No, you moron.<br><b>" + n1 + ":</b> I'm not Mormon, you fuck!"
                     }
                 case 50: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Throwing away batteries feels so bad. I feel like I should eat them.<br><b>" + n2 + ":</b> Don't do that. That's bad for <i>their</i> health! In fact, it's basically animal abuse! Microwave them instead - they can play in there for <i>minutes!</i><br><b>" + n1 + ":</b> Okay...<br>Not even a minute later...<br><b>" + n1 + ", watching the batteries spark and smoke in the microwave:</b> Hey I don't think they're playing in there...!"
@@ -781,12 +802,12 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> I could kill you if I wanted.<br><b>" + n2 + ":</b> Yeah? So could any other human being. So can a dog. So can a dedicated duck. You aren't special."
                 case 84: // Credit: Perchance Incorrect Quote Generator
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> Your future self is talking smack about you right now.<br><b>" + n2 + ":</b> Joke's on " + p2[2] + ", I'll ruin " + p2[3] + " damn life."
+                        return "<b>" + n1 + ":</b> Your future self is talking smack about you right now.<br><b>" + n2 + ":</b> Joke's on " + p2[1] + ", I'll ruin " + p2[3] + " damn life."
                     } else {
-                        return "<b>" + n1 + ":</b> Your future self is talking shit about you right now.<br><b>" + n2 + ":</b> Joke's on " + p2[2] + ", I'll ruin " + p2[3] + " fucking life."
+                        return "<b>" + n1 + ":</b> Your future self is talking shit about you right now.<br><b>" + n2 + ":</b> Joke's on " + p2[1] + ", I'll ruin " + p2[3] + " fucking life."
                     }
                 case 85: // Credit: Perchance Incorrect Quotes Generator
-                    return "<b>" + n1 + ":</b>Remember, if you die in the simulation-<br><b>" + n2 + ":</b> Yeah, yeah, I know. If you die in the simulation, you die in real life.<br><b>" + n1 + ":</b> What!? No! You just need to reset the simulation with the termnal! What is WRONG with you!?"
+                    return "<b>" + n1 + ":</b> Remember, if you die in the simulation-<br><b>" + n2 + ":</b> Yeah, yeah, I know. If you die in the simulation, you die in real life.<br><b>" + n1 + ":</b> What!? No! You just need to reset the simulation with the termnal! What is WRONG with you!?"
                 case 86: //Filter: Shipping
                     return "<b>" + n1 + ":</b> You're the love of my life and my best friend. I would do anything for you!<br><b>" + n2 + ":</b> I want you to eat three meals a day and have a decent sleep schedule.<br><b>" + n1 + ":</b> Absolutely not."
                 case 87: // Credit: Meme
@@ -803,6 +824,55 @@ function getQuote(choices) {
                     } else {
                         return "<b>" + n1 + ", about " + n2 + " :</b> " + p2[11] + " behind me, making that fucking face again. I don't even have to turn around to know it. God damn it. I hate that goddamned stupid face " + p2[0] + " make" + p2[14] + ". God fucking damnit."
                     }
+                case 90: // Credit: Me, lol! I made this one myself.
+                    return "*" + n1 + " pings everyone in the server with an important message.*<br><b>" + n2 + ":</b> WHY DID YOU PING ME AT 3 AM!?<br><b>" + n1 + ":</b> WHY ARE YOU ALLOWING DISCORD NOTIFICATIONS AT 3 AM!?"
+                case 91: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> What are your adjectives?<br><b>" + n2 + ":</b> You mean my pronouns?<br><b>" + n1 + ":</b> I already know what your pronouns are. What are your adjectives?<br><b>" + n2 + ":</b> Uh, I dunno. What are yours?<br><b>" + n1 + ":</b> NOISY AND CHAOTIC!<br><b>" + n2 + ":</b> Wow, I've never had something go from making no sense to complete sense so fast..."
+                case 92: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty messed up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n1 + ":</b> The sun isn't a rock go back to sleep."
+                    } else {
+                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty fucked up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n1 + ":</b> The sun isn't a rock go back to sleep."
+                    }
+                case 93: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> Why the fuck are you here!?<br><b>" + n2 + ":</b> I'm sorry... do you want me to leave?<br><b>" + n1 + ":</b> ...No."
+                    } else {
+                        return "<b>" + n1 + ":</b> Why the fuck are you here!?<br><b>" + n2 + ":</b> I'm sorry... do you want me to leave?<br><b>" + n1 + ":</b> ...No."
+                    }
+                case 94: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> " + n2 + "... I burnt the water.<br><b>" + n2 + ":</b> " + n1 + ", how the HECK did you burn the water!?"
+                    } else {
+                        return "<b>" + n1 + ":</b> " + n2 + "... I burnt the water.<br><b>" + n2 + ":</b> " + n1 + ", how the FUCK did you burn the water!?"
+                    }
+                case 95: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> If what " + n2 + " says is wrong, I will simply reshape reality so that what " + p2[0] + " said is correct."
+                case 96: // Filter: Shipping (Moderate) ..... Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> " + n2 + " and I are no longer dating.<br><b>" + n2 + ":</b> " + n1 + ", that's a <i>horrible</i> way of telling people that we're married!"
+                case 97: // Filter: Shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> Wait... you like me? For my personality?<br><b>" + n2 + ":</b> I know, I was surprised, too!"
+                case 98: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> The guy about to invent mayonnaise: \"Damn, I wish this sandwich tasted bad.\"<br><b>" + n2 + ":</b> Clearly you've never had mayonnaise on pizza before.<br><b>" + n1 + ":</b> I've never throttled someone to death with my bare hands either, but unlike what you said, that can change any second."
+                case 99: // Filter: Drugs ..... Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> What are you doing this weekend?<br><b>" + n2 + ":</b> Drugs, probably."
+                case 100: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    if (noswearing == false) {
+                        return "<b>" + n1 + ":</b> :(<br><b>" + n2 + ":</b> Turn that frown upside-down!<br><b>" + n1 + ":</b> ):<br><b>" + n1 + ":</b> Listen here you little snipe-"
+                    } else {
+                        return "<b>" + n1 + ":</b> :(<br><b>" + n2 + ":</b> Turn that frown upside-down!<br><b>" + n1 + ":</b> ):<br><b>" + n1 + ":</b> Listen here you little shit-"
+                    }
+                case 101: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> I hate to disagree with you.<br><b>" + n2 + ":</b> Oh, please, you <i>love</i> to disagree with me more than anything. It's your favourite thing in the world!"
+                case 102: //Filter: Mental Health ..... Credit: Me lol. I made this one myself.
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> I did it. I finally did it. I fed all the starving children, cured all the diseases, stopped all those natural disasters and helped that woman get her purse back.<br><b>" + n1 + ":</b> Maybe now " + n2 + " will be more considerate regarding my mental illness...<br><b>" + n2 + ":</b> But there's still someone who has it worse than you.<br><b>" + n1 + ":</b><br><b>" + n1 + ":</b> Who the heck is it?<br><b>" + n2 + ":</b> Me. My fingernail's chipped.<br><b>" + n1 + ":</b> LISTEN HERE YOU LITTLE-"
+                    } else {
+                        return "<b>" + n1 + ":</b> I did it. I finally did it. I fed all the starving children, cured all the diseases, stopped all those natural disasters and helped that woman get her purse back.<br><b>" + n1 + ":</b> Maybe now " + n2 + " will be more considerate regarding my mental illness...<br><b>" + n2 + ":</b> But there's still someone who has it worse than you.<br><b>" + n1 + ":</b><br><b>" + n1 + ":</b> Who the fuck is it?<br><b>" + n2 + ":</b> Me. My fingernail's chipped.<br><b>" + n1 + ":</b> YOU FUCKING SHITLOAD OF FUCK-"
+                    }
+                case 103: // Credit: Microsoft Windows error message
+                    return n1 + " has caused a General Protection Fault in module " + n2 + " at 6969:0420."
+                
             }
         case 3:
             switch(parseInt(choices[1])) {
@@ -885,7 +955,25 @@ function getQuote(choices) {
                 case 26: // Credit: Me lol. I made this one myself.
                     return "<b>" + n1 + ":</b> Stop trying to kill me! Leave me alone! I just don't want to get killed, okay?!<br><b>" + n2 + ":</b> But if I don't kill you... " + n3 + " will kill <i>me!</i><br><b>" + n1 + ":</b><br><br><b>" + n3 + ", walking up to " + n1 + " and " + n2 + ":</b> Ah, " + n2 + ", I see you've-<br><b>" + n1 + ":</b> If you dare lay a hand on " + n2 + " you're DEAD!"
                 case 27: // Credit: Perchance Incorrect Quote Generator
-                    return "<b>" + n1 + ":</b> Nice rock.<br><b>" + n2 + ":</b> Thanks. " + n3 + "gave it to me.<br><b>" + n3 + ":</b> I <i>threw</i> it at you!<br><b>" + n2 + ":</b> " + p3[16] + "n't " + p3[0] + " the sweetest?"
+                    return "<b>" + n1 + ":</b> Nice rock.<br><b>" + n2 + ":</b> Thanks. " + n3 + " gave it to me.<br><b>" + n3 + ":</b> I <i>threw</i> it at you!<br><b>" + n2 + ":</b> " + p3[16] + "n't " + p3[0] + " the sweetest?"
+                case 28: // Credit: Admiral Adorable's OMORI Meme Dubs
+                    return "<b>" + n1 + ":</b> *spouting some rather stupid nonsense*<br><b>" + n2 + ":</b> Shut up! I'd rather <i>die</i> than listen to you!<br><b>" + n3 + ", walking up behind " + n2 + ":</b> No, you wouldn't."
+                case 29: // Credit: Based on a meme video
+                    return "<b>" + n1 + ":</b> ♫ Can we get much higher? ♫<br><b>" + n2 + ":</b> ♪ So hiiiiigh ♫<br><b>" + n1 + ":</b> ♪ Oh oh o-<br><b>" + n3 + ":</b> ♪ Ooooh the misery... ♫<br><b>" + n1 + " and "+ n2 + ":</b><br><b>" + n2 + ":</b> ♫ Oh oh ooooh... ♪"
+                case 30: // Credit: Admiral Adorable's OMORI Meme Dubs, Perchance Incorrect Quotes Generator
+                    if (noswearing == true) {
+                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[3] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n + ":</b> Hopefully dead. I hated " + p3[3] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, curse you-"
+                    } else {
+                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[3] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n + ":</b> Hopefully dead. I hated " + p3[3] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, fuck you-"
+                    }
+                case 31: // Credit: ScatterPatter's Incorrect Quote Generator
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> What happens if I press the accelerator and brake at the same time?<br><b>" + n2 + ":</b> The car takes a screenshot!<br><b>" + n3 + ":</b> For the last time, get the heck out."
+                    } else {
+                        return "<b>" + n1 + ":</b> What happens if I press the accelerator and brake at the same time?<br><b>" + n2 + ":</b> The car takes a screenshot!<br><b>" + n3 + ":</b> For the last time, get the fuck out."
+                    }
+                case 32: // Credit: ScatterPatter's Incorrect Quote Generator
+                    return "<b>" + n1 + ":</b> Here's a fun Christmas idea: We hang mistletoe, but instead of kissing, you have to FIGHT whoever else is under it.<br><b>" + n2 + ":</b> " + n1 + ", no.<br><b>" + n3 + ":</b> Mistlefoe!<br><b>" + n2 + ":</b> Please stop encouraging " + p3[1] + "."
                 
             }
         case 4:
@@ -911,7 +999,7 @@ function getQuote(choices) {
                 case 7: // Credit: Meme
                     return "<b>" + n1 + ":</b> It's okay to ask for help.<br><b>" + n2 + ":</b> You're not a burden.<br><b>" + n3 + ":</b> Murder is okay.<br><b>" + n4 + ":</b> Your feelings matter."
                 case 8: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Yeah, I'm a she/they! (un-she/theys my katana and slices you in half!<br><b>" + n2 + ":</b> I've been he/it.<br><b>" + n3 + ":</b> I now pronouns you dead.<br><b>" + n4 + ":</b> Was/were!"
+                    return "<b>" + n1 + ":</b> Yeah, I'm a she/they! (un-she/theys my katana and slices you in half!)<br><b>" + n2 + ":</b> I've been he/it.<br><b>" + n3 + ":</b> I now pronouns you dead.<br><b>" + n4 + ":</b> Was/were!"
                 case 9: // Credit: Meme
                     return "<b>" + n1 + ":</b> WAKE ME UP-<br><b>" + n2 + ":</b> Before you go-go!<br><b>" + n3 + ":</b> When September ends...<br><b>" + n4 + ":</b> WAKE ME UP INSIDE!"
                 case 10: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -926,9 +1014,9 @@ function getQuote(choices) {
             switch(parseInt(choices[1])) {
                 default: // Credit: Jeaney Collects
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma mess you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U"
+                        return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma mess you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U WII-U-"
                     } else {
-                        return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma fuck you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U"
+                        return "<b>" + n1 + ":</b> Are Wii gonna have a problem?<br><b>" + n2 + ":</b> You best Switch up that attitude!<br><b>" + n3 + ":</b> You're playing a dangerous Game, Boy!<br><b>" + n4 + ":</b> Don't Nintendo Sixty-Force me to use this!<br><b>" + n1 + ":</b> I'mma fuck you up!<br>*Some un-NES-essary violence later...*<br><b>" + n5 + ":</b> WII-U WII-U WII-U WII-U-"
                     }
                 case 1: // Credit: Perchance Incorrect Quote Generator
                     return "<b>" + n1 + ":</b> Let's play Kiss Marry Kill!<br><b>" + n1 + ":</b> First, who would you kill?<br><b>" + n2 + ":</b> *points at " + n5 + ".<br><b>" + n3 + ":</b> *points at " + n5 + ".<br><b>" + n4 + ":</b> *points at " + n5 + ".<br><b>" + n5 + ":</b> *shrugs* I would kill me, too."
@@ -956,7 +1044,7 @@ function getQuote(choices) {
         case 7:
             switch(parseInt(choices[1])){
                 default: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> *Gets in " + p1[3] + " little clown car.*<br><b>" + n2 + ":</b> Gets in with " + p1[1] + ".*<br><b>" + n3 + ":</b> Gets in with " + p1[1] + ".*<br><b>" + n4 + ":</b> Gets in with " + p1[1] + ".*<br><b>" + n5 + ":</b> Gets in with " + p1[1] + ".*<br><b>" + n6 + ":</b> Gets in with " + p1[1] + ".*<br><b>" + n7 + ":</b> Gets in with " + p1[1] + ".*"
+                    return "<b>" + n1 + ":</b> *Gets in " + p1[3] + " little clown car.*<br><b>" + n2 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n3 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n4 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n5 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n6 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n7 + ":</b> *Gets in with " + p1[1] + ".*"
                 
             }
         case 9:
@@ -964,41 +1052,27 @@ function getQuote(choices) {
                 default: // Credit: Meme, Admiral Adorable's OMORI Meme Dubs
                     return "<b>The Squad giving mental health advice:<br>" + n1 + ":</b> Talk about your feelings<br><b>" + n2 + ":</b> Keep active<br><b>" + n3 + ":</b> Eat an potato<br><b>" + n4 + ":</b> Recite a dark spell<br><b>" + n5 + ":</b> Throw your phone in the lake<br><b>" + n6 + ":</b> Kiss a bird gently<br><b>" + n7 + ":</b> Scowl<br><b>" + n8 + ":</b> Make fun of someone you don't like<br><b>" + n9 + ":</b> Lie down in the dirt and let the earth slowly reclaim you."
             }
+        case 10:
+            switch(parseInt(choices[1])) {
+                default: // Credit: Me lol. I made this one myself.
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Crap! Crap! Crap!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[3] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the HECK!?"
+                    } else {
+                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Shit! Shit! Shit!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[3] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the FUCK!?"
+                    }
+
+            }
 
     }
 }
 
 function toggleCensors() {
-    censor = document.getElementById("swearing").checked
-    if (censor == true) {
-        noswearing = true;
-    } else {
-        noswearing = false;
-    }
-    censor = document.getElementById("crudeitems").checked
-    if (censor == true) {
-        filters[0] = true;
-    } else {
-        filters[0] = false;
-    }
-    censor = document.getElementById("suicide").checked
-    if (censor == true) {
-        filters[1] = true;
-    } else {
-        filters[1] = false;
-    }
-    censor = document.getElementById("drugs").checked
-    if (censor == true) {
-        filters[2] = true;
-    } else {
-        filters[2] = false;
-    }
-    censor = document.getElementById("sexual").checked
-    if (censor == true) {
-        filters[3] = true;
-    } else {
-        filters[3] = false;
-    }
+    noswearing = document.getElementById("swearing").checked;
+    filters[0] = document.getElementById("crudeitems").checked;
+    filters[1] = document.getElementById("suicide").checked;
+    filters[2] = document.getElementById("drugs").checked;
+    filters[3] = document.getElementById("sexual").checked;
+    filters[4] = document.getElementById("mentalillness").checked;
     return;
 }
 
@@ -1040,6 +1114,11 @@ function getCensoredQuotes() {
     if (filters[3] == true) {
         for (let i = 0; i < sexualquotes[parseInt(choice[0]) - 1].length; i++) {
             censoredquotes.push(sexualquotes[parseInt(choice[0]) - 1][i]);
+        }
+    }
+    if (filters[4] == true) {
+        for (let i = 0; i < mentalquotesquotes[parseInt(choice[0]) - 1].length; i++) {
+            censoredquotes.push(mentalquotesquotes[parseInt(choice[0]) - 1][i]);
         }
     }
 }
