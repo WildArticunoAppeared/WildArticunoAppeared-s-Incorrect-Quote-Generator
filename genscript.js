@@ -156,7 +156,7 @@ function applyPreset(character) {
                     document.getElementById("c1p2").value = "their";
                     document.getElementById("c1p3").value = "them";
                     document.getElementById("c1p4").value = "theirs";
-                    document.getElementById("c1p5").value = "themself";
+                    document.getElementById("c1p5").value = "themselves";
                     document.getElementById("1sp").checked = true;
                     break;
             }
@@ -184,7 +184,7 @@ function applyPreset(character) {
                     document.getElementById("c2p2").value = "their";
                     document.getElementById("c2p3").value = "them";
                     document.getElementById("c2p4").value = "theirs";
-                    document.getElementById("c2p5").value = "themself";
+                    document.getElementById("c2p5").value = "themselves";
                     document.getElementById("2sp").checked = "true";
                     break;
             }
@@ -212,7 +212,7 @@ function applyPreset(character) {
                     document.getElementById("c3p2").value = "their";
                     document.getElementById("c3p3").value = "them";
                     document.getElementById("c3p4").value = "theirs";
-                    document.getElementById("c3p5").value = "themself";
+                    document.getElementById("c3p5").value = "themselves";
                     document.getElementById("3sp").checked = false;
                     break;
             }
@@ -240,7 +240,7 @@ function applyPreset(character) {
                     document.getElementById("c4p2").value = "their";
                     document.getElementById("c4p3").value = "them";
                     document.getElementById("c4p4").value = "theirs";
-                    document.getElementById("c4p5").value = "themself";
+                    document.getElementById("c4p5").value = "themselves";
                     document.getElementById("4sp").checked = true;
                     break;
             }
@@ -268,7 +268,7 @@ function applyPreset(character) {
                     document.getElementById("c5p2").value = "their";
                     document.getElementById("c5p3").value = "them";
                     document.getElementById("c5p4").value = "theirs";
-                    document.getElementById("c5p5").value = "themself";
+                    document.getElementById("c5p5").value = "themselves";
                     document.getElementById("5sp").checked = true;
                     break;
             }
@@ -296,7 +296,7 @@ function applyPreset(character) {
                     document.getElementById("c6p2").value = "their";
                     document.getElementById("c6p3").value = "them";
                     document.getElementById("c6p4").value = "theirs";
-                    document.getElementById("c6p5").value = "themself";
+                    document.getElementById("c6p5").value = "themselves";
                     document.getElementById("6sp").checked = true;
                     break;
             }
@@ -324,7 +324,7 @@ function applyPreset(character) {
                     document.getElementById("c7p2").value = "their";
                     document.getElementById("c7p3").value = "them";
                     document.getElementById("c7p4").value = "theirs";
-                    document.getElementById("c7p5").value = "themself";
+                    document.getElementById("c7p5").value = "themselves";
                     document.getElementById("7sp").checked = true;
                     break;
             }
@@ -352,7 +352,7 @@ function applyPreset(character) {
                     document.getElementById("c8p2").value = "their";
                     document.getElementById("c8p3").value = "them";
                     document.getElementById("c8p4").value = "theirs";
-                    document.getElementById("c8p5").value = "themself";
+                    document.getElementById("c8p5").value = "themselves";
                     document.getElementById("8sp").checked = false;
                     break;
             }
@@ -380,7 +380,7 @@ function applyPreset(character) {
                     document.getElementById("c9p2").value = "their";
                     document.getElementById("c9p3").value = "them";
                     document.getElementById("c9p4").value = "theirs";
-                    document.getElementById("c9p5").value = "themself";
+                    document.getElementById("c9p5").value = "themselves";
                     document.getElementById("9sp").checked = true;
                     break;
             }
@@ -408,7 +408,7 @@ function applyPreset(character) {
                     document.getElementById("c10p2").value = "their";
                     document.getElementById("c10p3").value = "them";
                     document.getElementById("c10p4").value = "theirs";
-                    document.getElementById("c10p5").value = "themself";
+                    document.getElementById("c10p5").value = "themselves";
                     document.getElementById("10sp").checked = true;
                     break;
             }
