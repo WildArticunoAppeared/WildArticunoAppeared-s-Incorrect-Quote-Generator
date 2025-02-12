@@ -1,28 +1,28 @@
 //Pronouns. Capitalised starts at index 7.
 let malep = ["he", "his", "him", "his", "himself"];
 let femalep = ["she", "her", "her", "hers", "herself"];
-let otherp = ["they", "their", "them", "theirs", "themself"];
+let otherp = ["they", "their", "them", "theirs", "themselves"];
 //Init
 let n1 = "Person A";
-let p1 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p1 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n2 = "Person B";
-let p2 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p2 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n3 = "Person C";
-let p3 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p3 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n4 = "Person D";
-let p4 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p4 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n5 = "Person E";
-let p5 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p5 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n6 = "Person F";
-let p6 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p6 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n7 = "Person G";
-let p7 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p7 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n8 = "Person H";
-let p8 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p8 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n9 = "Person I";
-let p9 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p9 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let n10 = "Person J";
-let p10 = ["Plural","they", "their", "them", "theirs", "themself"];
+let p10 = ["Plural","they", "their", "them", "theirs", "themselves"];
 let choice = [1,0];
 let enablednumbers = [1,2,3,4,5,6,7,9,10];
 let quote = "Your quote here.";
@@ -141,6 +141,7 @@ function applyPreset(character) {
                     document.getElementById("c1p3").value = "him";
                     document.getElementById("c1p4").value = "his";
                     document.getElementById("c1p5").value = "himself";
+                    document.getElementById("1sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c1p1").value = "she";
@@ -148,6 +149,7 @@ function applyPreset(character) {
                     document.getElementById("c1p3").value = "her";
                     document.getElementById("c1p4").value = "hers";
                     document.getElementById("c1p5").value = "herself";
+                    document.getElementById("1sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c1p1").value = "they";
@@ -155,6 +157,7 @@ function applyPreset(character) {
                     document.getElementById("c1p3").value = "them";
                     document.getElementById("c1p4").value = "theirs";
                     document.getElementById("c1p5").value = "themself";
+                    document.getElementById("1sp").checked = true;
                     break;
             }
             break;
@@ -166,6 +169,7 @@ function applyPreset(character) {
                     document.getElementById("c2p3").value = "him";
                     document.getElementById("c2p4").value = "his";
                     document.getElementById("c2p5").value = "himself";
+                    document.getElementById("2sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c2p1").value = "she";
@@ -173,6 +177,7 @@ function applyPreset(character) {
                     document.getElementById("c2p3").value = "her";
                     document.getElementById("c2p4").value = "hers";
                     document.getElementById("c2p5").value = "herself";
+                    document.getElementById("2sp").checked = "false";
                     break;
                 case "other":
                     document.getElementById("c2p1").value = "they";
@@ -180,6 +185,7 @@ function applyPreset(character) {
                     document.getElementById("c2p3").value = "them";
                     document.getElementById("c2p4").value = "theirs";
                     document.getElementById("c2p5").value = "themself";
+                    document.getElementById("2sp").checked = "true";
                     break;
             }
             break;
@@ -191,6 +197,7 @@ function applyPreset(character) {
                     document.getElementById("c3p3").value = "him";
                     document.getElementById("c3p4").value = "his";
                     document.getElementById("c3p5").value = "himself";
+                    document.getElementById("3sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c3p1").value = "she";
@@ -198,6 +205,7 @@ function applyPreset(character) {
                     document.getElementById("c3p3").value = "her";
                     document.getElementById("c3p4").value = "hers";
                     document.getElementById("c3p5").value = "herself";
+                    document.getElementById("3sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c3p1").value = "they";
@@ -205,6 +213,7 @@ function applyPreset(character) {
                     document.getElementById("c3p3").value = "them";
                     document.getElementById("c3p4").value = "theirs";
                     document.getElementById("c3p5").value = "themself";
+                    document.getElementById("3sp").checked = false;
                     break;
             }
             break;
@@ -216,6 +225,7 @@ function applyPreset(character) {
                     document.getElementById("c4p3").value = "him";
                     document.getElementById("c4p4").value = "his";
                     document.getElementById("c4p5").value = "himself";
+                    document.getElementById("4sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c4p1").value = "she";
@@ -223,6 +233,7 @@ function applyPreset(character) {
                     document.getElementById("c4p3").value = "her";
                     document.getElementById("c4p4").value = "hers";
                     document.getElementById("c4p5").value = "herself";
+                    document.getElementById("4sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c4p1").value = "they";
@@ -230,6 +241,7 @@ function applyPreset(character) {
                     document.getElementById("c4p3").value = "them";
                     document.getElementById("c4p4").value = "theirs";
                     document.getElementById("c4p5").value = "themself";
+                    document.getElementById("4sp").checked = true;
                     break;
             }
             break;
@@ -241,6 +253,7 @@ function applyPreset(character) {
                     document.getElementById("c5p3").value = "him";
                     document.getElementById("c5p4").value = "his";
                     document.getElementById("c5p5").value = "himself";
+                    document.getElementById("5sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c5p1").value = "she";
@@ -248,6 +261,7 @@ function applyPreset(character) {
                     document.getElementById("c5p3").value = "her";
                     document.getElementById("c5p4").value = "hers";
                     document.getElementById("c5p5").value = "herself";
+                    document.getElementById("5sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c5p1").value = "they";
@@ -255,6 +269,7 @@ function applyPreset(character) {
                     document.getElementById("c5p3").value = "them";
                     document.getElementById("c5p4").value = "theirs";
                     document.getElementById("c5p5").value = "themself";
+                    document.getElementById("5sp").checked = true;
                     break;
             }
             break;
@@ -266,6 +281,7 @@ function applyPreset(character) {
                     document.getElementById("c6p3").value = "him";
                     document.getElementById("c6p4").value = "his";
                     document.getElementById("c6p5").value = "himself";
+                    document.getElementById("6sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c6p1").value = "she";
@@ -273,6 +289,7 @@ function applyPreset(character) {
                     document.getElementById("c6p3").value = "her";
                     document.getElementById("c6p4").value = "hers";
                     document.getElementById("c6p5").value = "herself";
+                    document.getElementById("6sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c6p1").value = "they";
@@ -280,6 +297,7 @@ function applyPreset(character) {
                     document.getElementById("c6p3").value = "them";
                     document.getElementById("c6p4").value = "theirs";
                     document.getElementById("c6p5").value = "themself";
+                    document.getElementById("6sp").checked = true;
                     break;
             }
             break;
@@ -291,6 +309,7 @@ function applyPreset(character) {
                     document.getElementById("c7p3").value = "him";
                     document.getElementById("c7p4").value = "his";
                     document.getElementById("c7p5").value = "himself";
+                    document.getElementById("7sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c7p1").value = "she";
@@ -298,6 +317,7 @@ function applyPreset(character) {
                     document.getElementById("c7p3").value = "her";
                     document.getElementById("c7p4").value = "hers";
                     document.getElementById("c7p5").value = "herself";
+                    document.getElementById("7sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c7p1").value = "they";
@@ -305,6 +325,7 @@ function applyPreset(character) {
                     document.getElementById("c7p3").value = "them";
                     document.getElementById("c7p4").value = "theirs";
                     document.getElementById("c7p5").value = "themself";
+                    document.getElementById("7sp").checked = true;
                     break;
             }
             break;
@@ -316,6 +337,7 @@ function applyPreset(character) {
                     document.getElementById("c8p3").value = "him";
                     document.getElementById("c8p4").value = "his";
                     document.getElementById("c8p5").value = "himself";
+                    document.getElementById("8sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c8p1").value = "she";
@@ -323,6 +345,7 @@ function applyPreset(character) {
                     document.getElementById("c8p3").value = "her";
                     document.getElementById("c8p4").value = "hers";
                     document.getElementById("c8p5").value = "herself";
+                    document.getElementById("8sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c8p1").value = "they";
@@ -330,6 +353,7 @@ function applyPreset(character) {
                     document.getElementById("c8p3").value = "them";
                     document.getElementById("c8p4").value = "theirs";
                     document.getElementById("c8p5").value = "themself";
+                    document.getElementById("8sp").checked = false;
                     break;
             }
             break;
@@ -341,6 +365,7 @@ function applyPreset(character) {
                     document.getElementById("c9p3").value = "him";
                     document.getElementById("c9p4").value = "his";
                     document.getElementById("c9p5").value = "himself";
+                    document.getElementById("9sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c9p1").value = "she";
@@ -348,6 +373,7 @@ function applyPreset(character) {
                     document.getElementById("c9p3").value = "her";
                     document.getElementById("c9p4").value = "hers";
                     document.getElementById("c9p5").value = "herself";
+                    document.getElementById("9sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c9p1").value = "they";
@@ -355,6 +381,7 @@ function applyPreset(character) {
                     document.getElementById("c9p3").value = "them";
                     document.getElementById("c9p4").value = "theirs";
                     document.getElementById("c9p5").value = "themself";
+                    document.getElementById("9sp").checked = true;
                     break;
             }
             break;
@@ -366,6 +393,7 @@ function applyPreset(character) {
                     document.getElementById("c10p3").value = "him";
                     document.getElementById("c10p4").value = "his";
                     document.getElementById("c10p5").value = "himself";
+                    document.getElementById("10sp").checked = false;
                     break;
                 case "female":
                     document.getElementById("c10p1").value = "she";
@@ -373,6 +401,7 @@ function applyPreset(character) {
                     document.getElementById("c10p3").value = "her";
                     document.getElementById("c10p4").value = "hers";
                     document.getElementById("c10p5").value = "herself";
+                    document.getElementById("10sp").checked = false;
                     break;
                 case "other":
                     document.getElementById("c10p1").value = "they";
@@ -380,6 +409,7 @@ function applyPreset(character) {
                     document.getElementById("c10p3").value = "them";
                     document.getElementById("c10p4").value = "theirs";
                     document.getElementById("c10p5").value = "themself";
+                    document.getElementById("10sp").checked = true;
                     break;
             }
             break;
@@ -1220,7 +1250,7 @@ function getCensoredQuotes() {
 }
 
 function capitalise(string) {
-    return string.charAt(0).toUpperCase + string.substring(1);
+    return string.charAt(0).toUpperCase() + string.substring(1);
 }
 
 function editEnabledNumbers(changed) {
