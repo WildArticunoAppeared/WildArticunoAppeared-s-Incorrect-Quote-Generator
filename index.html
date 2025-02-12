@@ -11,82 +11,209 @@
     <div class="texts" id="input">
         Number of Characters:
         <!--Some of the options are commented out because I don't have quotes for them yet.-->
-        <select name="numberofpeople" id="numberofpeople" onchange="applyNumber()">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
-            <option value="6">Six</option>
-            <option value="7">Seven</option>
-            <!--<option value="8">Eight</option>-->
-            <option value="9">Nine</option>
-            <option value="10">Ten</option>
-            <option value="11">Any</option>
-        </select>
         <br>
+        <input type="checkbox" onchange="editEnabledNumbers(1)" id="1p" checked="true">
+        <label for="1p">1</label>
+        <input type="checkbox" onchange="editEnabledNumbers(2)" id="2p" checked="true">
+        <label for="2p">2</label>
+        <input type="checkbox" onchange="editEnabledNumbers(3)" id="3p" checked="true">
+        <label for="3p">3</label>
+        <input type="checkbox" onchange="editEnabledNumbers(4)" id="4p" checked="true">
+        <label for="4p">4</label>
+        <input type="checkbox" onchange="editEnabledNumbers(5)" id="5p" checked="true">
+        <label for="5p">5</label>
+        <input type="checkbox" onchange="editEnabledNumbers(6)" id="6p" checked="true">
+        <label for="6p">6</label>
+        <input type="checkbox" onchange="editEnabledNumbers(7)" id="7p" checked="true">
+        <label for="7p">7</label>
+        <!--<input type="checkbox" onchange="editEnabledNumbers(8)" id="8p" checked="true">
+        <label for="8p">8</label>-->
+        <input type="checkbox" onchange="editEnabledNumbers(9)" id="9p" checked="true">
+        <label for="9p">9</label>
+        <input type="checkbox" onchange="editEnabledNumbers(10)" id="10p" checked="true">
+        <label for="10p">10</label>
+        <br><br>
         Character Names and Pronouns:<br><br>
-        <input type="text" id="name1" placeholder="First Character" value="Person A">
-        <input type="text" id="name2" placeholder="Second Character" value="Person B" disabled="true">
-        <input type="text" id="name3" placeholder="Third Character" value="Person C" disabled="true">
-        <input type="text" id="name4" placeholder="Fourth Character" value="Person D" disabled="true">
-        <input type="text" id="name5" placeholder="Fifth Character" value="Person E" disabled="true"><br>
-        <select id="gen1" class="gensel">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen2" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen3" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen4" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen5" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select><br>
-        <input type="text" id="name6" placeholder="Sixth Character" value="Person F" disabled="true">
-        <input type="text" id="name7" placeholder="Seventh Character" value="Person G" disabled="true">
-        <input type="text" id="name8" placeholder="Eighth Character" value="Person H" disabled="true">
-        <input type="text" id="name9" placeholder="Ninth Character" value="Person I" disabled="true">
-        <input type="text" id="name10" placeholder="Tenth Character" value="Person J" disabled="true"><br>
-        <select id="gen6" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen7" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen8" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen9" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <select id="gen10" class="gensel" disabled="true">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select><br><br>
-        <button onclick="generateQuote()">Generate Quote</button> <button onclick="applyNames()">Update Names</button>
+        <div id = "characterinput">
+            <div id="nameinput">
+                <span class="blueglow"><b>Names</b></span><br><br>
+                <input type="text" id="name1" placeholder="First Character" value="Person A"><div class="customise1 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name2" placeholder="Second Character" value="Person B"><div class="customise2 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name3" placeholder="Third Character" value="Person C"><div class="customise3 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name4" placeholder="Fourth Character" value="Person D"><div class="customise4 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name5" placeholder="Fifth Character" value="Person E"><div class="customise5 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name6" placeholder="Sixth Character" value="Person F"><div class="customise6 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name7" placeholder="Seventh Character" value="Person G"><div class="customise7 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name8" placeholder="Eighth Character" value="Person H"><div class="customise8 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name9" placeholder="Ninth Character" value="Person I"><div class="customise9 closed"><br><br><br><br><br><br><br></div><br><br>
+                <input type="text" id="name10" placeholder="Tenth Character" value="Person J"><div class="customise10 closed"><br><br><br><br><br><br><br></div><br>
+            </div>
+            <div id="pronouninput">
+                <span class="blueglow"><b>Pronouns</b></span><br><br>
+                Presets:
+                <select id="preset1">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(1)">Use Preset</button> <button onclick="toggleCustomise(1)">Customise</button><br>
+                <div class="customise1 closed">
+                    "Today, <input type="text" id="c1p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c1p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c1p3" value="them">."<br>
+                    "The house was all <input type="text" id="c1p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c1p5" value="themself">!"<br>
+                    <input type="checkbox" id="1sp"><label for="1sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset2">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(2)">Use Preset</button> <button onclick="toggleCustomise(2)">Customise</button><br>
+                <div class="customise2 closed">
+                    "Today, <input type="text" id="c2p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c2p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c2p3" value="them">."<br>
+                    "The house was all <input type="text" id="c2p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c2p5" value="themself">!"<br>
+                    <input type="checkbox" id="2sp"><label for="2sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset3">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(3)">Use Preset</button> <button onclick="toggleCustomise(3)">Customise</button><br>
+                <div class="customise3 closed"><b>Or, fill in the following:</b><br>
+                    "Today, <input type="text" id="c3p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c3p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c3p3" value="them">."<br>
+                    "The house was all <input type="text" id="c3p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c3p5" value="themself">!"<br>
+                    <input type="checkbox" id="3sp"><label for="3sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset4">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(4)">Use Preset</button> <button onclick="toggleCustomise(4)">Customise</button><br>
+                <div class="customise4 closed">
+                    "Today, <input type="text" id="c4p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c4p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c4p3" value="them">."<br>
+                    "The house was all <input type="text" id="c4p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c4p5" value="themself">!"<br>
+                    <input type="checkbox" id="4sp"><label for="4sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset5">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(5)">Use Preset</button> <button onclick="toggleCustomise(5)">Customise</button><br>
+                <div class="customise5 closed">
+                    "Today, <input type="text" id="c5p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c5p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c5p3" value="them">."<br>
+                    "The house was all <input type="text" id="c5p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c5p5" value="themself">!"<br>
+                    <input type="checkbox" id="5sp"><label for="5sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset6">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(6)">Use Preset</button> <button onclick="toggleCustomise(6)">Customise</button><br>
+                <div class="customise6 closed">
+                    "Today, <input type="text" id="c6p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c6p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c6p3" value="them">."<br>
+                    "The house was all <input type="text" id="c6p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c6p5" value="themself">!"<br>
+                    <input type="checkbox" id="6sp"><label for="6sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset7">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(7)">Use Preset</button> <button onclick="toggleCustomise(7)">Customise</button><br>
+                <div class="customise7 closed">
+                    "Today, <input type="text" id="c7p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c7p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c7p3" value="them">."<br>
+                    "The house was all <input type="text" id="c7p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c7p5" value="themself">!"<br>
+                    <input type="checkbox" id="7sp"><label for="7sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset8">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(8)">Use Preset</button> <button onclick="toggleCustomise(8)">Customise</button><br>
+                <div class="customise8 closed">
+                    "Today, <input type="text" id="c8p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c8p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c8p3" value="them">."<br>
+                    "The house was all <input type="text" id="c8p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c8p5" value="themself">!"<br>
+                    <input type="checkbox" id="8sp"><label for="8sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset9">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(9)">Use Preset</button> <button onclick="toggleCustomise(9)">Customise</button><br>
+                <div class="customise9 closed">
+                    "Today, <input type="text" id="c9p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c9p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c9p3" value="them">."<br>
+                    "The house was all <input type="text" id="c9p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c9p5" value="themself">!"<br>
+                    <input type="checkbox" id="9sp"><label for="9sp">Plural pronouns</label><br><br>
+                </div><br>
+
+                Presets:
+                <select id="preset10">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="applyPreset(10)">Use Preset</button> <button onclick="toggleCustomise(10)">Customise</button><br>
+                <div class="customise10 closed">
+                    "Today, <input type="text" id="c10p1" value="they"> went to the park."<br>
+                    "We brought <input type="text" id="c10p2" value="their"> pet along for the ride."<br>
+                    "No one else came with <input type="text" id="c10p3" value="them">."<br>
+                    "The house was all <input type="text" id="c10p4" value="theirs"> for the day."<br>
+                    "This person did it all by <input type="text" id="c10p5" value="themself">!"<br>
+                    <input type="checkbox" id="10sp"><label for="10sp">Plural pronouns</label><br><br>
+                </div><br>
+            </div>
+        </div>
+        <div>
+            <button onclick="generateQuote()">Generate Quote</button> <button onclick="applyNames()">Update Names</button>
+        </div>
     </div>
     <div class="texts" id="output">
         <p id="quoteout">Click <span class="blueglow"><b>Generate Quote</b></span> in the box above to begin!</p>
