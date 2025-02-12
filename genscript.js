@@ -1,29 +1,30 @@
 //Pronouns. Capitalised starts at index 7.
-let malep = ["he", "him", "his", "his", "he's", "he'd", "he'll","He", "Him", "His", "His", "He's", "He'd", "He'll", "s", "is", "Is", "f"]
-let femalep = ["she", "her", "hers", "her", "she's", "she'd", "she'll","She", "Her", "Hers", "Her", "She's", "She'd", "She'll", "s", "is", "Is", "f"]
-let otherp = ["they", "them", "theirs", "their", "they're", "they'd", "they'll","They", "Them", "Theirs", "Their", "They're", "They'd", "They'll", "", "are", "Are", "ves"]
+let malep = ["he", "his", "him", "his", "himself"];
+let femalep = ["she", "her", "her", "hers", "herself"];
+let otherp = ["they", "their", "them", "theirs", "themself"];
 //Init
 let n1 = "Person A";
-let p1 = otherp;
+let p1 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n2 = "Person B";
-let p2 = otherp;
+let p2 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n3 = "Person C";
-let p3 = otherp;
+let p3 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n4 = "Person D";
-let p4 = otherp;
+let p4 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n5 = "Person E";
-let p5 = otherp;
+let p5 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n6 = "Person F";
-let p6 = otherp;
+let p6 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n7 = "Person G";
-let p7 = otherp;
+let p7 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n8 = "Person H";
-let p8 = otherp;
+let p8 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n9 = "Person I";
-let p9 = otherp;
+let p9 = ["Plural","they", "their", "them", "theirs", "themself"];
 let n10 = "Person J";
-let p10 = otherp;
+let p10 = ["Plural","they", "their", "them", "theirs", "themself"];
 let choice = [1,0];
+let enablednumbers = [1,2,3,4,5,6,7,9,10];
 let quote = "Your quote here.";
 let noswearing = false;
 let censoredquotes = [];
@@ -35,218 +36,16 @@ let shipquotesstrict = [[37,59,62,73],[18,25,31,32,38,41,71,97],[10,16],[],[1],[
 let suicidequotes = [[40],[],[],[],[],[],[],[],[],[]]; //Filter Index: 1
 let drugquotes = [[],[69,99],[],[],[],[],[],[],[],[]]; //Filter Index: 2
 let sexualquotes = [[],[59,80],[15],[],[],[],[],[],[],[]]; //Filter Index: 3
-let mentalquotes = [[44],[102],[],[],[],[],[],[],[],[]]; //Filter Index: 4
-
-function applyNumber() {
-    number = parseInt(document.getElementById("numberofpeople").value);
-    switch(number) {
-        case 1:
-            document.getElementById("name2").disabled = true;
-            document.getElementById("name3").disabled = true;
-            document.getElementById("name4").disabled = true;
-            document.getElementById("name5").disabled = true;
-            document.getElementById("name6").disabled = true;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = true;
-            document.getElementById("gen3").disabled = true;
-            document.getElementById("gen4").disabled = true;
-            document.getElementById("gen5").disabled = true;
-            document.getElementById("gen6").disabled = true;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;
-        break;
-        case 2:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = true;
-            document.getElementById("name4").disabled = true;
-            document.getElementById("name5").disabled = true;
-            document.getElementById("name6").disabled = true;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = true;
-            document.getElementById("gen4").disabled = true;
-            document.getElementById("gen5").disabled = true;
-            document.getElementById("gen6").disabled = true;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;
-        break;
-        case 3:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = true;
-            document.getElementById("name5").disabled = true;
-            document.getElementById("name6").disabled = true;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = true;
-            document.getElementById("gen5").disabled = true;
-            document.getElementById("gen6").disabled = true;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;
-        break;
-        case 4:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = true;
-            document.getElementById("name6").disabled = true;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = true;
-            document.getElementById("gen6").disabled = true;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;
-        break;
-        case 5:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = true;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = true;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;            
-        break;
-        case 6:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = false;
-            document.getElementById("name7").disabled = true;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = false;
-            document.getElementById("gen7").disabled = true;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;            
-        break;
-        case 7:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = false;
-            document.getElementById("name7").disabled = false;
-            document.getElementById("name8").disabled = true;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = false;
-            document.getElementById("gen7").disabled = false;
-            document.getElementById("gen8").disabled = true;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;            
-        break;
-        case 8:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = false;
-            document.getElementById("name7").disabled = false;
-            document.getElementById("name8").disabled = false;
-            document.getElementById("name9").disabled = true;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = false;
-            document.getElementById("gen7").disabled = false;
-            document.getElementById("gen8").disabled = false;
-            document.getElementById("gen9").disabled = true;
-            document.getElementById("gen10").disabled = true;
-        break;
-        case 9:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = false;
-            document.getElementById("name7").disabled = false;
-            document.getElementById("name8").disabled = false;
-            document.getElementById("name9").disabled = false;
-            document.getElementById("name10").disabled = true;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = false;
-            document.getElementById("gen7").disabled = false;
-            document.getElementById("gen8").disabled = false;
-            document.getElementById("gen9").disabled = false;
-            document.getElementById("gen10").disabled = true;
-        break;
-        default:
-            document.getElementById("name2").disabled = false;
-            document.getElementById("name3").disabled = false;
-            document.getElementById("name4").disabled = false;
-            document.getElementById("name5").disabled = false;
-            document.getElementById("name6").disabled = false;
-            document.getElementById("name7").disabled = false;
-            document.getElementById("name8").disabled = false;
-            document.getElementById("name9").disabled = false;
-            document.getElementById("name10").disabled = false;
-            document.getElementById("gen2").disabled = false;
-            document.getElementById("gen3").disabled = false;
-            document.getElementById("gen4").disabled = false;
-            document.getElementById("gen5").disabled = false;
-            document.getElementById("gen6").disabled = false;
-            document.getElementById("gen7").disabled = false;
-            document.getElementById("gen8").disabled = false;
-            document.getElementById("gen9").disabled = false;
-            document.getElementById("gen10").disabled = false;
-        break;
-    }
-}
+let mentalquotes = [[44],[102,104],[],[],[],[],[],[],[],[]]; //Filter Index: 4
 
 function generateQuote() {
-    choice[0] = document.getElementById("numberofpeople").value;
+    choice[0] = -1;
     choice[1] = -1;
-    if (parseInt(choice[0]) == 11 || parseInt(choice[0] == 8)) {
+    if (enablednumbers.length == 0) {
+        document.getElementById("quoteout").innerHTML = getQuote([11,0]);
+        return;
+    }
+    while (enablednumbers.includes(parseInt(choice[0])) == false) {
         choice[0] = Math.floor(Math.random() * 10) + 1;
     }
     getCensoredQuotes();
@@ -258,7 +57,7 @@ function generateQuote() {
         break;
         case 2:
             while (censoredquotes.includes(parseInt(choice[1])) || choice[1] < 0) {
-                choice[1] = Math.floor(Math.random() * 104);
+                choice[1] = Math.floor(Math.random() * 105);
             }
         break;
         case 3:
@@ -304,61 +103,351 @@ function generateQuote() {
         break;
     }
     applyNames();
-    //document.getElementById("quoteout").innerHTML = quote;
 }
 
 function applyNames() {
-    p1 = getPronouns(document.getElementById("gen1").value);
+    p1 = getPronouns(1);
     n1 = document.getElementById("name1").value;
-    if (choice[0] >= 2) {
-        p2 = getPronouns(document.getElementById("gen2").value);
-        n2 = document.getElementById("name2").value;
-        if (choice[0] >= 3) {
-            p3 = getPronouns(document.getElementById("gen3").value);
-            n3 = document.getElementById("name3").value;
-            if (choice[0] >= 4) {
-                p4 = getPronouns(document.getElementById("gen4").value);
-                n4 = document.getElementById("name4").value;
-                if (choice[0] >= 5) {
-                    p5 = getPronouns(document.getElementById("gen5").value);
-                    n5 = document.getElementById("name5").value;
-                    if (choice[0] >= 6) {
-                        p6 = getPronouns(document.getElementById("gen6").value);
-                        n6 = document.getElementById("name6").value;
-                        if (choice[0] >= 7) {
-                            p7 = getPronouns(document.getElementById("gen7").value);
-                            n7 = document.getElementById("name7").value;
-                            if (choice[0] >= 8) {
-                                p8 = getPronouns(document.getElementById("gen8").value);
-                                n8 = document.getElementById("name8").value;
-                                if (choice[0] >= 9) {
-                                    p9 = getPronouns(document.getElementById("gen9").value);
-                                    n9 = document.getElementById("name9").value;
-                                    if (choice[0] >= 10) {
-                                        p10 = getPronouns(document.getElementById("gen10").value);
-                                        n10 = document.getElementById("name10").value;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    p2 = getPronouns(2);
+    n2 = document.getElementById("name2").value;
+    p3 = getPronouns(3);
+    n3 = document.getElementById("name3").value;
+    p4 = getPronouns(4);
+    n4 = document.getElementById("name4").value;
+    p5 = getPronouns(5);
+    n5 = document.getElementById("name5").value;
+    p6 = getPronouns(6);
+    n6 = document.getElementById("name6").value;
+    p7 = getPronouns(7);
+    n7 = document.getElementById("name7").value;
+    p8 = getPronouns(8);
+    n8 = document.getElementById("name8").value;
+    p9 = getPronouns(9);
+    n9 = document.getElementById("name9").value;
+    p10 = getPronouns(10);
+    n10 = document.getElementById("name10").value;
     document.getElementById("quoteout").innerHTML = getQuote(choice);
     //document.getElementsByClassName("na1").innerHTML = document.getElementById("name1").value;
     
 }
 
+function applyPreset(character) {
+    switch(character) {
+        case 1:
+            switch(document.getElementById("preset1").value) {
+                case "male":
+                    document.getElementById("c1p1").value = "he";
+                    document.getElementById("c1p2").value = "his";
+                    document.getElementById("c1p3").value = "him";
+                    document.getElementById("c1p4").value = "his";
+                    document.getElementById("c1p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c1p1").value = "she";
+                    document.getElementById("c1p2").value = "her";
+                    document.getElementById("c1p3").value = "her";
+                    document.getElementById("c1p4").value = "hers";
+                    document.getElementById("c1p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c1p1").value = "they";
+                    document.getElementById("c1p2").value = "their";
+                    document.getElementById("c1p3").value = "them";
+                    document.getElementById("c1p4").value = "theirs";
+                    document.getElementById("c1p5").value = "themself";
+                    break;
+            }
+            break;
+        case 2:
+            switch(document.getElementById("preset2").value) {
+                case "male":
+                    document.getElementById("c2p1").value = "he";
+                    document.getElementById("c2p2").value = "his";
+                    document.getElementById("c2p3").value = "him";
+                    document.getElementById("c2p4").value = "his";
+                    document.getElementById("c2p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c2p1").value = "she";
+                    document.getElementById("c2p2").value = "her";
+                    document.getElementById("c2p3").value = "her";
+                    document.getElementById("c2p4").value = "hers";
+                    document.getElementById("c2p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c2p1").value = "they";
+                    document.getElementById("c2p2").value = "their";
+                    document.getElementById("c2p3").value = "them";
+                    document.getElementById("c2p4").value = "theirs";
+                    document.getElementById("c2p5").value = "themself";
+                    break;
+            }
+            break;
+        case 3:
+            switch(document.getElementById("preset3").value) {
+                case "male":
+                    document.getElementById("c3p1").value = "he";
+                    document.getElementById("c3p2").value = "his";
+                    document.getElementById("c3p3").value = "him";
+                    document.getElementById("c3p4").value = "his";
+                    document.getElementById("c3p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c3p1").value = "she";
+                    document.getElementById("c3p2").value = "her";
+                    document.getElementById("c3p3").value = "her";
+                    document.getElementById("c3p4").value = "hers";
+                    document.getElementById("c3p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c3p1").value = "they";
+                    document.getElementById("c3p2").value = "their";
+                    document.getElementById("c3p3").value = "them";
+                    document.getElementById("c3p4").value = "theirs";
+                    document.getElementById("c3p5").value = "themself";
+                    break;
+            }
+            break;
+        case 4:
+            switch(document.getElementById("preset4").value) {
+                case "male":
+                    document.getElementById("c4p1").value = "he";
+                    document.getElementById("c4p2").value = "his";
+                    document.getElementById("c4p3").value = "him";
+                    document.getElementById("c4p4").value = "his";
+                    document.getElementById("c4p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c4p1").value = "she";
+                    document.getElementById("c4p2").value = "her";
+                    document.getElementById("c4p3").value = "her";
+                    document.getElementById("c4p4").value = "hers";
+                    document.getElementById("c4p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c4p1").value = "they";
+                    document.getElementById("c4p2").value = "their";
+                    document.getElementById("c4p3").value = "them";
+                    document.getElementById("c4p4").value = "theirs";
+                    document.getElementById("c4p5").value = "themself";
+                    break;
+            }
+            break;
+        case 5:
+            switch(document.getElementById("preset5").value) {
+                case "male":
+                    document.getElementById("c5p1").value = "he";
+                    document.getElementById("c5p2").value = "his";
+                    document.getElementById("c5p3").value = "him";
+                    document.getElementById("c5p4").value = "his";
+                    document.getElementById("c5p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c5p1").value = "she";
+                    document.getElementById("c5p2").value = "her";
+                    document.getElementById("c5p3").value = "her";
+                    document.getElementById("c5p4").value = "hers";
+                    document.getElementById("c5p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c5p1").value = "they";
+                    document.getElementById("c5p2").value = "their";
+                    document.getElementById("c5p3").value = "them";
+                    document.getElementById("c5p4").value = "theirs";
+                    document.getElementById("c5p5").value = "themself";
+                    break;
+            }
+            break;
+        case 6:
+            switch(document.getElementById("preset6").value) {
+                case "male":
+                    document.getElementById("c6p1").value = "he";
+                    document.getElementById("c6p2").value = "his";
+                    document.getElementById("c6p3").value = "him";
+                    document.getElementById("c6p4").value = "his";
+                    document.getElementById("c6p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c6p1").value = "she";
+                    document.getElementById("c6p2").value = "her";
+                    document.getElementById("c6p3").value = "her";
+                    document.getElementById("c6p4").value = "hers";
+                    document.getElementById("c6p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c6p1").value = "they";
+                    document.getElementById("c6p2").value = "their";
+                    document.getElementById("c6p3").value = "them";
+                    document.getElementById("c6p4").value = "theirs";
+                    document.getElementById("c6p5").value = "themself";
+                    break;
+            }
+            break;
+        case 7:
+            switch(document.getElementById("preset7").value) {
+                case "male":
+                    document.getElementById("c7p1").value = "he";
+                    document.getElementById("c7p2").value = "his";
+                    document.getElementById("c7p3").value = "him";
+                    document.getElementById("c7p4").value = "his";
+                    document.getElementById("c7p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c7p1").value = "she";
+                    document.getElementById("c7p2").value = "her";
+                    document.getElementById("c7p3").value = "her";
+                    document.getElementById("c7p4").value = "hers";
+                    document.getElementById("c7p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c7p1").value = "they";
+                    document.getElementById("c7p2").value = "their";
+                    document.getElementById("c7p3").value = "them";
+                    document.getElementById("c7p4").value = "theirs";
+                    document.getElementById("c7p5").value = "themself";
+                    break;
+            }
+            break;
+        case 8:
+            switch(document.getElementById("preset8").value) {
+                case "male":
+                    document.getElementById("c8p1").value = "he";
+                    document.getElementById("c8p2").value = "his";
+                    document.getElementById("c8p3").value = "him";
+                    document.getElementById("c8p4").value = "his";
+                    document.getElementById("c8p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c8p1").value = "she";
+                    document.getElementById("c8p2").value = "her";
+                    document.getElementById("c8p3").value = "her";
+                    document.getElementById("c8p4").value = "hers";
+                    document.getElementById("c8p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c8p1").value = "they";
+                    document.getElementById("c8p2").value = "their";
+                    document.getElementById("c8p3").value = "them";
+                    document.getElementById("c8p4").value = "theirs";
+                    document.getElementById("c8p5").value = "themself";
+                    break;
+            }
+            break;
+        case 9:
+            switch(document.getElementById("preset9").value) {
+                case "male":
+                    document.getElementById("c9p1").value = "he";
+                    document.getElementById("c9p2").value = "his";
+                    document.getElementById("c9p3").value = "him";
+                    document.getElementById("c9p4").value = "his";
+                    document.getElementById("c9p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c9p1").value = "she";
+                    document.getElementById("c9p2").value = "her";
+                    document.getElementById("c9p3").value = "her";
+                    document.getElementById("c9p4").value = "hers";
+                    document.getElementById("c9p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c9p1").value = "they";
+                    document.getElementById("c9p2").value = "their";
+                    document.getElementById("c9p3").value = "them";
+                    document.getElementById("c9p4").value = "theirs";
+                    document.getElementById("c9p5").value = "themself";
+                    break;
+            }
+            break;
+        case 10:
+            switch(document.getElementById("preset10").value) {
+                case "male":
+                    document.getElementById("c10p1").value = "he";
+                    document.getElementById("c10p2").value = "his";
+                    document.getElementById("c10p3").value = "him";
+                    document.getElementById("c10p4").value = "his";
+                    document.getElementById("c10p5").value = "himself";
+                    break;
+                case "female":
+                    document.getElementById("c10p1").value = "she";
+                    document.getElementById("c10p2").value = "her";
+                    document.getElementById("c10p3").value = "her";
+                    document.getElementById("c10p4").value = "hers";
+                    document.getElementById("c10p5").value = "herself";
+                    break;
+                case "other":
+                    document.getElementById("c10p1").value = "they";
+                    document.getElementById("c10p2").value = "their";
+                    document.getElementById("c10p3").value = "them";
+                    document.getElementById("c10p4").value = "theirs";
+                    document.getElementById("c10p5").value = "themself";
+                    break;
+            }
+            break;
+    }
+}
+
 function getPronouns(character) {
     switch(character) {
-        case "male":
-            return malep;
-        case "female":
-            return femalep;
-        default:
-            return otherp;
+        case 1:
+            if (document.getElementById("1sp").checked == false) {
+                return ["Single", document.getElementById("c1p1").value, document.getElementById("c1p2").value, document.getElementById("c1p3").value, document.getElementById("c1p4").value, document.getElementById("c1p5").value];
+            } else {
+                return ["Plural", document.getElementById("c1p1").value, document.getElementById("c1p2").value, document.getElementById("c1p3").value, document.getElementById("c1p4").value, document.getElementById("c1p5").value];
+            }
+        case 2:
+            if (document.getElementById("2sp").checked == false) {
+                return ["Single", document.getElementById("c2p1").value, document.getElementById("c2p2").value, document.getElementById("c2p3").value, document.getElementById("c2p4").value, document.getElementById("c2p5").value];
+            } else {
+                return ["Plural", document.getElementById("c2p1").value, document.getElementById("c2p2").value, document.getElementById("c2p3").value, document.getElementById("c2p4").value, document.getElementById("c2p5").value];
+            }
+        case 3:
+            if (document.getElementById("3sp").checked == false) {
+                return ["Single", document.getElementById("c3p1").value, document.getElementById("c3p2").value, document.getElementById("c3p3").value, document.getElementById("c3p4").value, document.getElementById("c3p5").value];
+            } else {
+                return ["Plural", document.getElementById("c3p1").value, document.getElementById("c3p2").value, document.getElementById("c3p3").value, document.getElementById("c3p4").value, document.getElementById("c3p5").value];
+            }
+        case 4:
+            if (document.getElementById("4sp").checked == false) {
+                return ["Single", document.getElementById("c4p1").value, document.getElementById("c4p2").value, document.getElementById("c4p3").value, document.getElementById("c4p4").value, document.getElementById("c4p5").value];
+            } else {
+                return ["Plural", document.getElementById("c4p1").value, document.getElementById("c4p2").value, document.getElementById("c4p3").value, document.getElementById("c4p4").value, document.getElementById("c4p5").value];
+            }
+        case 5:
+            if (document.getElementById("5sp").checked == false) {
+                return ["Single", document.getElementById("c5p1").value, document.getElementById("c5p2").value, document.getElementById("c5p3").value, document.getElementById("c5p4").value, document.getElementById("c5p5").value];
+            } else {
+                return ["Plural", document.getElementById("c5p1").value, document.getElementById("c5p2").value, document.getElementById("c5p3").value, document.getElementById("c5p4").value, document.getElementById("c5p5").value];
+            }
+        case 6:
+            if (document.getElementById("6sp").checked == false) {
+                return ["Single", document.getElementById("c6p1").value, document.getElementById("c6p2").value, document.getElementById("c6p3").value, document.getElementById("c6p4").value, document.getElementById("c6p5").value];
+            } else {
+                return ["Plural", document.getElementById("c6p1").value, document.getElementById("c6p2").value, document.getElementById("c6p3").value, document.getElementById("c6p4").value, document.getElementById("c6p5").value];
+            }
+        case 7:
+            if (document.getElementById("7sp").checked == false) {
+                return ["Single", document.getElementById("c7p1").value, document.getElementById("c7p2").value, document.getElementById("c7p3").value, document.getElementById("c7p4").value, document.getElementById("c7p5").value];
+            } else {
+                return ["Plural", document.getElementById("c7p1").value, document.getElementById("c7p2").value, document.getElementById("c7p3").value, document.getElementById("c7p4").value, document.getElementById("c7p5").value];
+            }
+        case 8:
+            if (document.getElementById("8sp").checked == false) {
+                return ["Single", document.getElementById("c8p1").value, document.getElementById("c8p2").value, document.getElementById("c8p3").value, document.getElementById("c8p4").value, document.getElementById("c8p5").value];
+            } else {
+                return ["Plural", document.getElementById("c8p1").value, document.getElementById("c8p2").value, document.getElementById("c8p3").value, document.getElementById("c8p4").value, document.getElementById("c8p5").value];
+            }
+        case 9:
+            if (document.getElementById("9sp").checked == false) {
+                return ["Single", document.getElementById("c9p1").value, document.getElementById("c9p2").value, document.getElementById("c9p3").value, document.getElementById("c9p4").value, document.getElementById("c9p5").value];
+            } else {
+                return ["Plural", document.getElementById("c9p1").value, document.getElementById("c9p2").value, document.getElementById("c9p3").value, document.getElementById("c9p4").value, document.getElementById("c9p5").value];
+            }
+        case 10:
+            if (document.getElementById("10sp").checked == false) {
+                return ["Single", document.getElementById("c10p1").value, document.getElementById("c10p2").value, document.getElementById("c10p3").value, document.getElementById("c10p4").value, document.getElementById("c10p5").value];
+            } else {
+                return ["Plural", document.getElementById("c10p1").value, document.getElementById("c10p2").value, document.getElementById("c10p3").value, document.getElementById("c10p4").value, document.getElementById("c10p5").value];
+            }
     }
 }
 
@@ -385,7 +474,7 @@ function getQuote(choices) {
                 case 6: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ", lying injured on the ground:</b> I got too silly."
                 case 7: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "*" + n1 + " is playing Pokémon when a Pidgey escapes " + p1[3] + " Poké Ball.*<br><b>" + n1 + ":</b> Who do you think you are?"
+                    return "*" + n1 + " is playing Pokémon when a Pidgey escapes " + p1[2] + " Poké Ball.*<br><b>" + n1 + ":</b> Who do you think you are?"
                 case 8:
                     return "<b>" + n1 + ":</b> Getting all my boys mood rings so I know when my homies need a hug."
                 case 9: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -407,7 +496,7 @@ function getQuote(choices) {
                 case 13: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> They call me 7 Knives... because that's knives it takes me to cook things because I keep putting 'em in the sink without thinking about it."
                 case 14: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ", looking at " + p1[3] + " reflection in the mirror:</b> I'm so relevant and beautiful."
+                    return "<b>" + n1 + ", looking at " + p1[2] + " reflection in the mirror:</b> I'm so relevant and beautiful."
                 case 15: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> How much dirt do you have to throw in the ocean to make a new country?"
                 case 16: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -421,7 +510,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ", softly:</b> For fuck's sake..."
                     }
                 case 19: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "*" + n1 + " watches a kid fall over.*<br><b>" + n1 + ", under " + p1[3] + " breath:</b> Get rekt."
+                    return "*" + n1 + " watches a kid fall over.*<br><b>" + n1 + ", under " + p1[2] + " breath:</b> Get rekt."
                 case 20: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I expect I'll be able to solve a lot of problems once my baby brain falls out and my adult brain grows in."
                 case 21: //Filter: Quotes about swearing ..... Credit: Admiral Adorable's OMORI Meme Dubs
@@ -459,7 +548,7 @@ function getQuote(choices) {
                 case 35: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I'm too soft for this world...<br><b>" + n1 + ":</b> It hurts my hand to open water bottles..."
                 case 36: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ", with tears in " + p1[3] + " eyes:</b> Time to make a joke!"
+                    return "<b>" + n1 + ", with tears in " + p1[2] + " eyes:</b> Time to make a joke!"
                 case 37: //Filter: Quotes about shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Don't date me unless you want to be amazed by the amount of movies and shows I've just never seen."
                 case 38: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -529,7 +618,7 @@ function getQuote(choices) {
                 case 62: //Filter: Shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Here's a cute date idea; We go to a botanical garden, you point out a flower and I immediately eat it!"
                 case 63: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Dermatologists HATE " + p1[1] + "! Scientists FEAR " + p1[1] + "! Hardened soldiers TREMBLE under " + p1[3] + " gaze! God DID NOT CREATE " + p1[1].toUpperCase() + " and " + p1[0] + " WILL TEAR THROUGH REALITY'S FABRIC!"
+                    return "<b>" + n1 + ":</b> Dermatologists HATE " + p1[3] + "! Scientists FEAR " + p1[3] + "! Hardened soldiers TREMBLE under " + p1[2] + " gaze! God DID NOT CREATE " + p1[3].toUpperCase() + " and " + p1[1] + " WILL TEAR THROUGH REALITY'S FABRIC!"
                 case 64: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I hate when people ask me \"What did you do today?\"! Listen, I woke up at noon and then it was 5 PM, okay? I don't know!"
                 case 65: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -562,9 +651,9 @@ function getQuote(choices) {
             switch(parseInt(choices[1])) {
                 default: // Credit: personsonable (Tumblr)
                     if (noswearing == true) {
-                        return "<b>" + n1 + ", pointing " + p1[3] + " weapon at " + n2 + ":</b> Tell me the name of God you fungal piece of crap!<br><b>" + n2 + ":</b> Do you feel your heart burning? Can you feel the struggle within? The fear within me is beyond anything your soul can make. You cannot kill me in a way that matters.<br><b>" + n1 + ", with tears streaming down " + p1[3] + " face:</b> I'M NOT FREAKING SCARED OF YOU!"
+                        return "<b>" + n1 + ", pointing " + p1[2] + " weapon at " + n2 + ":</b> Tell me the name of God you fungal piece of crap!<br><b>" + n2 + ":</b> Do you feel your heart burning? Can you feel the struggle within? The fear within me is beyond anything your soul can make. You cannot kill me in a way that matters.<br><b>" + n1 + ", with tears streaming down " + p1[2] + " face:</b> I'M NOT FREAKING SCARED OF YOU!"
                     } else {
-                        return "<b>" + n1 + ", pointing " + p1[3] + " weapon at " + n2 + ":</b> Tell me the name of God you fungal piece of shit!<br><b>" + n2 + ":</b> Do you feel your heart burning? Can you feel the struggle within? The fear within me is beyond anything your soul can make. You cannot kill me in a way that matters.<br><b>" + n1 + ", with tears streaming down " + p1[3] + " face:</b> I'M NOT FUCKING SCARED OF YOU!"
+                        return "<b>" + n1 + ", pointing " + p1[2] + " weapon at " + n2 + ":</b> Tell me the name of God you fungal piece of shit!<br><b>" + n2 + ":</b> Do you feel your heart burning? Can you feel the struggle within? The fear within me is beyond anything your soul can make. You cannot kill me in a way that matters.<br><b>" + n1 + ", with tears streaming down " + p1[2] + " face:</b> I'M NOT FUCKING SCARED OF YOU!"
                     }
                 case 1: // Credit: Perchance Incorrect Quotes Generator
                     return "<b>" + n1 + ":</b> " + n2 + ", you need to react when people cry!<br><b>" + n2 + ":</b> I did. I rolled my eyes."
@@ -573,7 +662,7 @@ function getQuote(choices) {
                 case 3: // Credit: Nyctomatter
                     return "<b>" + n1 + ":</b> We have come for your sanity!<br><b>" + n2 + ":</b> GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD -"
                 case 4: // Credit: Katraccon (Behind the GIFs)
-                    return "<b>" + n1 + ", staggering through the snow:</b> This is it. I'm lost. I'm freezing. I'm going to die out here... <br>*" + n1 + " collapses*<br><b>" + n1 + ":</b> " + n2 + "... I'm sorry...<br><b>" + n2 + ", in the distance:</b> HEY! " + n1.toUpperCase() + "! COME ON, WE'RE GOING HOME NOW!<br><b>" + n1 + ":</b> *instantly gets back up and runs towards " + n2 + "."
+                    return "<b>" + n1 + ", staggering through the snow:</b> This is it. I'm lost. I'm freezing. I'm going to die out here... <br>*" + n1 + " collapses*<br><b>" + n1 + ":</b> " + n2 + "... I'm sorry...<br><b>" + n2 + ", in the distance:</b> HEY! " + n1.toUpperCase() + "! COME ON, WE'RE GOING HOME NOW!<br><b>" + n1 + ":</b> *instantly gets back up and runs towards " + n2 + "*"
                 case 5: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "*" + n1 + " and " + n2 + " are texting each other* <br><b>" + n1 + ":</b> Your such a jerk!<br><b>" + n2 + ":</b> You're*<br><b>" + n1 + ":</b> OMG your so annoying!<br><b>" + n2 + ":</b> You're*<br><b>" + n1 + ":</b> Stop doing that. Your making me mad!<br><b>" + n2 + ":</b> You're*<br><b>" + n1 + ":</b> Fine! I'm gonna slap you're face!<br><b>" + n2 + ":</b> Your*"
                 case 6: //Filter: Crude ..... Credit: Admiral Adorable's OMORI Meme Dubs, personsonable (Tumblr)
@@ -605,9 +694,9 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> Does the phrase \"fucked up and evil\" imply that you can be fucked up and good?<br><b>" + n2 + ":</b> Yes.<br><b>" + n1 + ":</b> Examples?<br><b>" + n2 + ":</b> Me."
                     }
                 case 14: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> I will cast a spell to make you have a good day!<br>*" + p1[7] + " cast" + p1[14] + " the spell.*<br><b>" + n2 + ":</b> Burn the witch!"
+                    return "<b>" + n1 + ":</b> I will cast a spell to make you have a good day!<br>*" + capitalise(p1[1]) + checkPlurality(p1, " casts", " cast") + " the spell.*<br><b>" + n2 + ":</b> Burn the witch!"
                 case 15: // Credit: dennys-at-3-am (Tumblr, formerly Kel Yourself)
-                    return "<b>" + n1 + ":</b> The year is 2030. Cake art is so realistic that literally anything could be cake. The uncertainty has gripped the world in fear. I go to hug " + n2 + " for comfort. " + p2[7] + " " + p2[15] + " cake.<br><b>" + n1 + ":</b> I sob in despair as I eat my cake " + n2 + ". " + p2[7] + " " + p2[15] + " delicious."
+                    return "<b>" + n1 + ":</b> The year is 2030. Cake art is so realistic that literally anything could be cake. The uncertainty has gripped the world in fear. I go to hug " + n2 + " for comfort. " + capitalise(p2[1]) + checkPlurality(p2, " is", " are") + " cake.<br><b>" + n1 + ":</b> I sob in despair as I eat my cake " + n2 + ". " + capitalise(p2[1]) + checkPlurality(p2, " is", " are") + " delicious."
                 case 16: // Credit: Admiral Adorable's OMORI Meme Dubs
                     if (noswearing == true) {
                         return "<b>" + n1 + ":</b> I just came up with a really good four word cooking horror story but I don't know if you guys are ready for it.<br><b>" + n1 + ":</b> Two cups vanilla extract.<br><b>" + n2 + ":</b> MY GOODNESS!!!"
@@ -619,7 +708,7 @@ function getQuote(choices) {
                 case 18: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Excuse me, " + n2 + ", but have you ever been arrested?<br><b>" + n2 + ":</b> Yeah. How could you tell?<br><b>" + n1 + ":</b> I was gonna say it's illegal to be that cute, but now I'm curious.<br><b>" + n2 + ":</b> Aggravated assault."
                 case 19: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> " + p2[11] + " out there making owl noises.<br><b>" + n2 + ":</b> Who?"
+                    return "<b>" + n1 + ":</b> " + capitalise(p2[1]) + checkPlurality(p2, "'s", "'re") + " out there making owl noises.<br><b>" + n2 + ":</b> Who?"
                 case 20: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> I'm busy now. I just ate glass by accident.<br><b>" + n2 + ":</b> You <i>what!?</i><br><b>" + n1 + ":</b> Please leave me alone, I ate glass!"
                 case 21: // Credit: Admiral Adorable's OMORI Meme Dubs
@@ -689,12 +778,12 @@ function getQuote(choices) {
                 case 41: // Credit: Meme
                     return "<b>" + n1 + ":</b> ♪ Can we pretend that aeroplanes in the night sky are like shooting stars? ♫<br><b>" + n2 + ":</b> ♫ I could really use a wish right now, wish right now, wish right now... ♪"
                 case 42: // Credit: Zarla (Tumblr/DeviantArt)
-                    return "<b>" + n1 + ":</b> ZZZZZZWZWZWZZZAAZWHHHHZZZZZAAZWWAAZKADJASKLJAAKSALFJSDKLJSDK<br><b>" + n2 + ", afraid, with tears in " + p2[3] + " eyes:</b> Don't say that..."
+                    return "<b>" + n1 + ":</b> ZZZZZZWZWZWZZZAAZWHHHHZZZZZAAZWWAAZKADJASKLJAAKSALFJSDKLJSDK<br><b>" + n2 + ", afraid, with tears in " + p2[2] + " eyes:</b> Don't say that..."
                 case 43: // Credit: Me, lol. I made this one myself.
                     if (noswearing == true) {
-                        return "After a stage play in which the dog's fate is left unknown:<br><b>" + n1 + ", holding back tears:</b> H-Hey, what happened to the dog?<br><b>" + n2 + ", who had played the dog as well as one of the villains:</b> Well, I'm the one who played the dog so...<br><b>" + n1 + ":</b> I don't care about you. Or Dreadnaught! I saw " + p2[1] + " alive and well at the end. And you're in front of me and you're okay! But what about the dog? What happened to the dog!?<br><b>" + n2 + ":</b> Does it really matter what happened to the dog?<br><b>" + n1 + ", visibly sobbing and grabbing " + n2 + " by the collar:</b> If none of you buttholes can tell me what happened to the <i>flippin'</i> dog, I'm gonna kill every last one of you and make sure no one ever finds out what happened to you."
+                        return "After a stage play in which the dog's fate is left unknown:<br><b>" + n1 + ", holding back tears:</b> H-Hey, what happened to the dog?<br><b>" + n2 + ", who had played the dog as well as one of the villains:</b> Well, I'm the one who played the dog so...<br><b>" + n1 + ":</b> I don't care about you. Or Dreadnaught! I saw " + p2[3] + " alive and well at the end. And you're in front of me and you're okay! But what about the dog? What happened to the dog!?<br><b>" + n2 + ":</b> Does it really matter what happened to the dog?<br><b>" + n1 + ", visibly sobbing and grabbing " + n2 + " by the collar:</b> If none of you buttholes can tell me what happened to the <i>flippin'</i> dog, I'm gonna kill every last one of you and make sure no one ever finds out what happened to you."
                     } else {
-                        return "After a stage play in which the dog's fate is left unknown:<br><b>" + n1 + ", holding back tears:</b> H-Hey, what happened to the dog?<br><b>" + n2 + ", who had played the dog as well as one of the villains:</b> Well, I'm the one who played the dog so...<br><b>" + n1 + ":</b> I don't care about you. Or Dreadnaught! I saw " + p2[1] + " alive and well at the end. And you're in front of me and you're okay! But what about the dog? What happened to the dog!?<br><b>" + n2 + ":</b> Does it really matter what happened to the dog?<br><b>" + n1 + ", visibly sobbing and grabbing " + n2 + " by the collar:</b> If none of you assholes can tell me what happened to the <i>fucking</i> dog, I'm gonna kill every last one of you and make sure no one ever finds out what happened to you."
+                        return "After a stage play in which the dog's fate is left unknown:<br><b>" + n1 + ", holding back tears:</b> H-Hey, what happened to the dog?<br><b>" + n2 + ", who had played the dog as well as one of the villains:</b> Well, I'm the one who played the dog so...<br><b>" + n1 + ":</b> I don't care about you. Or Dreadnaught! I saw " + p2[3] + " alive and well at the end. And you're in front of me and you're okay! But what about the dog? What happened to the dog!?<br><b>" + n2 + ":</b> Does it really matter what happened to the dog?<br><b>" + n1 + ", visibly sobbing and grabbing " + n2 + " by the collar:</b> If none of you assholes can tell me what happened to the <i>fucking</i> dog, I'm gonna kill every last one of you and make sure no one ever finds out what happened to you."
                     }
                 case 44: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral? Are we going to Golden Corral?<br><b>" + n2 + ":</b> Yeah... unless you wanna go somewhere else...<br><b>" + n1 + ": No.</b>"
@@ -739,7 +828,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ", on " + p1[3] + " hands and knees:</b> Incorrect DOS version$$ÏU‹ì☻´	ÅV☻Í!☻‹å]Â<br><b>" + n2 + ":</b> Shit! Are you okay, " + n1 + "???<br><b>" + n1 + ", throwing up:</b> ☻R‰G☻ŽØ‰O☻+ÈIÆ☻M‰O☻ÇG☻ÿß‰G☻+ÇHÆ☻M‰_☻‰G☻!"
                     }
                 case 57: //Filter: Crude ..... Credit: Meme
-                    return "<b>" + n1 + ":</b> I can still hear " + p2[3] + " voice...<br><b>" + n2 + ":</b> Gay. Gay. Homosexual. Gay."
+                    return "<b>" + n1 + ":</b> I can still hear " + p2[2] + " voice...<br><b>" + n2 + ":</b> Gay. Gay. Homosexual. Gay."
                 case 58: // Credit: Perchance Incorrect Quotes Generator
                     return "<b>" + n1 + ":</b> Truth or dare?<br><b>" + n2 + ":</b> Truth.<br><b>" + n1 + ":</b> How many hours have you slept this week?<br><b>" + n2 + ":</b> ...Dare.<br><b>" + n1 + ":</b> Go to sleep.<br><b>" + n2 + ":</b> I don't like this game."
                 case 59: //Filter: Sexual ..... Credit: Admiral Adorable's OMORI Meme Dubs
@@ -820,9 +909,9 @@ function getQuote(choices) {
                     }
                 case 89: // Credit: Meme
                     if (noswearing == true) {
-                        return "<b>" + n1 + ", about " + n2 + " :</b> " + p2[11] + " behind me, making that bloody face again. I don't even have to turn around to know it. Gosh darn it. I hate that gosh darned stupid face " + p2[0] + " make" + p2[14] + ". Gosh freaking darnit."
+                        return "<b>" + n1 + ", about " + n2 + " :</b> " + p2[1] + checkPlurality(p2, "'s", "'re") + " behind me, making that bloody face again. I don't even have to turn around to know it. Gosh darn it. I hate that gosh darned stupid face " + p2[1] + " make" + checkPlurality(p2, "s", "") + ". Gosh freaking darnit."
                     } else {
-                        return "<b>" + n1 + ", about " + n2 + " :</b> " + p2[11] + " behind me, making that fucking face again. I don't even have to turn around to know it. God damn it. I hate that goddamned stupid face " + p2[0] + " make" + p2[14] + ". God fucking damnit."
+                        return "<b>" + n1 + ", about " + n2 + " :</b> " + p2[1] + checkPlurality(p2, "'s", "'re") + " behind me, making that fucking face again. I don't even have to turn around to know it. God damn it. I hate that goddamned stupid face " + p2[1] + " make" + checkPlurality(p2, "s", "") + ". God fucking damnit."
                     }
                 case 90: // Credit: Me, lol! I made this one myself.
                     return "*" + n1 + " pings everyone in the server with an important message.*<br><b>" + n2 + ":</b> WHY DID YOU PING ME AT 3 AM!?<br><b>" + n1 + ":</b> WHY ARE YOU ALLOWING DISCORD NOTIFICATIONS AT 3 AM!?"
@@ -830,9 +919,9 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> What are your adjectives?<br><b>" + n2 + ":</b> You mean my pronouns?<br><b>" + n1 + ":</b> I already know what your pronouns are. What are your adjectives?<br><b>" + n2 + ":</b> Uh, I dunno. What are yours?<br><b>" + n1 + ":</b> NOISY AND CHAOTIC!<br><b>" + n2 + ":</b> Wow, I've never had something go from making no sense to complete sense so fast..."
                 case 92: // Credit: Admiral Adorable's OMORI Meme Dubs
                     if (noswearing == true) {
-                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty messed up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n1 + ":</b> The sun isn't a rock go back to sleep."
+                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty messed up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n2 + ":</b> The sun isn't a rock go back to sleep."
                     } else {
-                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty fucked up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n1 + ":</b> The sun isn't a rock go back to sleep."
+                        return "<b>" + n1 + ", at " + n2 + "'s bedside at 3AM:</b> Pretty fucked up that we depict the moon as a girl and the sun as a boy. They're just floating rocks in space.<br><b>" + n1 + ":</b> " + n2 + "? Wake up, " + n2 + ".<br><b>" + n1 + ":</b> Listen, they're sexless!<br><b>" + n2 + ":</b> The sun isn't a rock go back to sleep."
                     }
                 case 93: // Credit: Admiral Adorable's OMORI Meme Dubs
                     if (noswearing == true) {
@@ -847,7 +936,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> " + n2 + "... I burnt the water.<br><b>" + n2 + ":</b> " + n1 + ", how the FUCK did you burn the water!?"
                     }
                 case 95: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> If what " + n2 + " says is wrong, I will simply reshape reality so that what " + p2[0] + " said is correct."
+                    return "<b>" + n1 + ":</b> If what " + n2 + " says is wrong, I will simply reshape reality so that what " + p2[1] + " said is correct."
                 case 96: // Filter: Shipping (Moderate) ..... Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> " + n2 + " and I are no longer dating.<br><b>" + n2 + ":</b> " + n1 + ", that's a <i>horrible</i> way of telling people that we're married!"
                 case 97: // Filter: Shipping (Strict) ..... Credit: Admiral Adorable's OMORI Meme Dubs
@@ -857,7 +946,7 @@ function getQuote(choices) {
                 case 99: // Filter: Drugs ..... Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> What are you doing this weekend?<br><b>" + n2 + ":</b> Drugs, probably."
                 case 100: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    if (noswearing == false) {
+                    if (noswearing == true) {
                         return "<b>" + n1 + ":</b> :(<br><b>" + n2 + ":</b> Turn that frown upside-down!<br><b>" + n1 + ":</b> ):<br><b>" + n1 + ":</b> Listen here you little snipe-"
                     } else {
                         return "<b>" + n1 + ":</b> :(<br><b>" + n2 + ":</b> Turn that frown upside-down!<br><b>" + n1 + ":</b> ):<br><b>" + n1 + ":</b> Listen here you little shit-"
@@ -872,7 +961,12 @@ function getQuote(choices) {
                     }
                 case 103: // Credit: Microsoft Windows error message
                     return n1 + " has caused a General Protection Fault in module " + n2 + " at 6969:0420."
-                
+                case 104: //Filter: Mental Health ..... Credit: Me lol. I made this one myself.
+                    if (noswearing == true) {
+                        return "<b>" + n1 + ":</b> Prepare yourself, " + n2 + ", for I am going to read your mind!<br><b>" + n2 + ":</b> Noooo! Don't do it! PLEASE DON'T!<br><b>" + n1 + ":</b> What!? Are you scared that I'm gonna find out some embarassing secret of yours? Or that you've been very, very bad?<br><b>" + n2 + ":</b> It's not that, I SWEAR-<br><b>" + n1 + ":</b> Okay, so what? Let me-<br><b>" + n1 + ":</b> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-<br><b>" + n2 + ":</b> *sighs* Gosh freaking dang it..."
+                    }   else {
+                        return "<b>" + n1 + ":</b> Prepare yourself, " + n2 + ", for I am going to read your mind!<br><b>" + n2 + ":</b> Noooo! Don't do it! PLEASE DON'T!<br><b>" + n1 + ":</b> What!? Are you scared that I'm gonna find out some embarassing secret of yours? Or that you've been very, very bad?<br><b>" + n2 + ":</b> It's not that, I SWEAR-<br><b>" + n1 + ":</b> Okay, so what? Let me-<br><b>" + n1 + ":</b> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-<br><b>" + n2 + ":</b> *sighs* God fucking damnit..."
+                    }
             }
         case 3:
             switch(parseInt(choices[1])) {
@@ -907,14 +1001,14 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> Ew, I hate bugs. They're so gross.<br><b>" + n2 + ":</b> What did you say about bugs!?<br><b>" + n2 + ":</b> " + n3 + ", hold my flower!<br><b>" + n3 + ", taking " + n2 + "'s flower:</b> Kick " + p1[3] + " ass, " + n2 + "! I've got your flower!"
                     }
                 case 7: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> Don't you miss " + n2 + "?<br><b>" + n3 + ":</b> Nope, not at all!<br><b>" + n1 + ":</b> Take off your sunglasses.<br>*" + n3 + " takes off " + p3[3] + " sunglasses, revealing that " + p3[0] + " " + p3[15] + " in tears."
+                    return "<b>" + n1 + ":</b> Don't you miss " + n2 + "?<br><b>" + n3 + ":</b> Nope, not at all!<br><b>" + n1 + ":</b> Take off your sunglasses.<br>*" + n3 + " takes off " + p3[2] + " sunglasses, revealing that " + p3[1] + " " + checkPlurality(p3, "is", "are") + " in tears."
                 case 8:
-                    return "*" + n1 + " posts two selfies of " + p1[1] + "self in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n1 + ":</b> This isn't about " + p3[1] + "."
+                    return "*" + n1 + " posts two selfies of " + p1[1] + "self in the pool.<br><b>" + n1 + ":</b> Out here living my best life!<br><b>" + n2 + ":</b> " + n3 + " is drowning!<br><b>" + n1 + ":</b> This isn't about " + p3[3] + "."
                 case 9: // Credit: Meme
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[1] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> RACK OFF!"
+                        return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[3] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> RACK OFF!"
                     } else {
-                        return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[1] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> FUCK OFF!"
+                        return "<b>" + n1 + ":</b> I am the Sand Guardian! Guardian of the sand!<br><b>" + n2 + ":</b> Poseidon quivers before " + p1[3] + "!<br><b>" + n1 + ", at " + n3 + " in the distance:</b> FUCK OFF!"
                     }
                 case 10: //Filter: Shipping (Strict) ..... Credit: Me, lol. I made this one myself!
                     return "<b>" + n1 + ":</b> I ship " + n2 + " and " + n3 + "...<br><b>" + n2 + " and " + n3 + ":</b> Please no-<br><b>" + n1 + ":</b> With therapy!<br><b>" + n2 + " and " + n3 + ":</b> ..."
@@ -929,7 +1023,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> Anyone wanna get in an argument with me?<br><b>" + n2 + ":</b> " + n3 + " isn't even that good.<br><b>" + n1 + ":</b> I was just kidding, but you know what? Fuck you for real!"
                     }
                 case 14: // Credit: ScatterPatter's Incorrect Quotes Generator
-                    return "<b>" + n1 + ":</b> " + n2 + ", I'll need you to keep an eye on " + n3 + " today. " + p3[11] + " going to say the wrong thing to the wrong person and get punched.<br><b>" + n2 + ":</b> Sure! I'd love to see " + n3 + " get punched!<br><b>" + n2 + ":</b> Try again.<br><b>" + n2 + ":</b> *sigh* I will stop " + n3 + " from getting punched..."
+                    return "<b>" + n1 + ":</b> " + n2 + ", I'll need you to keep an eye on " + n3 + " today. " + capitalise(p3[1]) + checkPlurality(p3, "'s", "'re") + " going to say the wrong thing to the wrong person and get punched.<br><b>" + n2 + ":</b> Sure! I'd love to see " + n3 + " get punched!<br><b>" + n2 + ":</b> Try again.<br><b>" + n2 + ":</b> *sigh* I will stop " + n3 + " from getting punched..."
                 case 15: //Filters: Shipping (Moderate), Sexual ..... Credit: Meme
                     return "<b>" + n1 + ":</b> Sorry I'm late, I was doing stuff.<br><b>" + n2 + ":</b> I'm \"stuff\".<br><b>" + n1 + ":</b> OMG " + n2 + ", noooooo!<br><b>" + n3 + ":</b> Heheh, you were banging " + n2 + "!"
                 case 16: //Filters: Shipping (Strict)
@@ -941,30 +1035,30 @@ function getQuote(choices) {
                 case 19: // Credit: SwiftKill, Bo En (Twitter), u/Indie_Maite (Reddit)
                     return "<b>" + n1 + ":</b> ♫ Close...<br><b>" + n2 + ":</b> ...your mouth.<br><b>" + n1 + ":</b> Aw...<br><b>" + n3 + ":</b> ♪ You'll be here soon-"
                 case 20: // Credit: Perchance Incorrect Quote Generator
-                    return "<b>" + n1 + ":</b> " + n2 + ", " + n3 + " keeps bullying me at school.<br><b>" + n2 + ":</b> Ask your teacher for help.<br>The next day...<br><b>" + n1 + ", to " + p1[3] + " teacher:</b> Can you please help me beat up " + n3 + "?"
+                    return "<b>" + n1 + ":</b> " + n2 + ", " + n3 + " keeps bullying me at school.<br><b>" + n2 + ":</b> Ask your teacher for help.<br>The next day...<br><b>" + n1 + ", to " + p1[2] + " teacher:</b> Can you please help me beat up " + n3 + "?"
                 case 21: // Credit: Perchance Incorrect Quote Generator
                     return "<b>" + n1 + ":</b> " + n2 + ", we need that!<br><b>" + n2 + ", holding " + n3 + " over a rubbish bin:</b> No we don't.<br><b>" + n1 + ":</b> Gimme that-<br><b>" + n2 + ":</b> No, it's garbage!"
                 case 22: // Credit: Perchance Incorrect Quote Generator
-                    return "<b>" + n1 + ", pointing to " + n3 + "'s empty room:</b> YOU LET " + p3[1] + " ESCAPE!<br><b>" + n2 + ":</b> I WAS ON BREAK!"
+                    return "<b>" + n1 + ", pointing to " + n3 + "'s empty room:</b> YOU LET " + n3.toUpperCase + " ESCAPE!<br><b>" + n2 + ":</b> I WAS ON BREAK!"
                 case 23: // Credit: Perchance Incorrect Quote Generator
                     return "<b>" + n1 + ":</b> Without ugly, there would be no beauty in this world.<br><b>" + n2 + ":</b> Thank you for your sacrifice, " + n3 + "."
                 case 24: // Credit: Perchance Incorrect Quote Generator
                     return "<b>" + n1 + ":</b> All I did was kill " + n3 + ". Is that really such a crime?<br><b>" + n2 + ":</b><br><b>" + n2 + ":</b> Yes!?"
                 case 25: // Credit: TC-96 (Tumblr)
-                    return "<b>" + n1 + ":</b> Ugh! " + n2 + ", " + n3 + " has been so MEAN to me! " + p3[11] + " always hitting and kicking me all the time. Make it stop!<br><b>" + n2 + ", looking at " + n3 + ":</b> Nah mate, I get it."
+                    return "<b>" + n1 + ":</b> Ugh! " + n2 + ", " + n3 + " has been so MEAN to me! " + capitalise(p3[1]) + checkPlurality(p3, "'s", "'re") + " always hitting and kicking me all the time. Make it stop!<br><b>" + n2 + ", looking at " + n3 + ":</b> Nah mate, I get it."
                 case 26: // Credit: Me lol. I made this one myself.
                     return "<b>" + n1 + ":</b> Stop trying to kill me! Leave me alone! I just don't want to get killed, okay?!<br><b>" + n2 + ":</b> But if I don't kill you... " + n3 + " will kill <i>me!</i><br><b>" + n1 + ":</b><br><br><b>" + n3 + ", walking up to " + n1 + " and " + n2 + ":</b> Ah, " + n2 + ", I see you've-<br><b>" + n1 + ":</b> If you dare lay a hand on " + n2 + " you're DEAD!"
                 case 27: // Credit: Perchance Incorrect Quote Generator
-                    return "<b>" + n1 + ":</b> Nice rock.<br><b>" + n2 + ":</b> Thanks. " + n3 + " gave it to me.<br><b>" + n3 + ":</b> I <i>threw</i> it at you!<br><b>" + n2 + ":</b> " + p3[16] + "n't " + p3[0] + " the sweetest?"
+                    return "<b>" + n1 + ":</b> Nice rock.<br><b>" + n2 + ":</b> Thanks. " + n3 + " gave it to me.<br><b>" + n3 + ":</b> I <i>threw</i> it at you!<br><b>" + n2 + ":</b> " + checkPlurality(p3, "Isn't ", "Aren't") + p3[1] + " the sweetest?"
                 case 28: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> *spouting some rather stupid nonsense*<br><b>" + n2 + ":</b> Shut up! I'd rather <i>die</i> than listen to you!<br><b>" + n3 + ", walking up behind " + n2 + ":</b> No, you wouldn't."
                 case 29: // Credit: Based on a meme video
                     return "<b>" + n1 + ":</b> ♫ Can we get much higher? ♫<br><b>" + n2 + ":</b> ♪ So hiiiiigh ♫<br><b>" + n1 + ":</b> ♪ Oh oh o-<br><b>" + n3 + ":</b> ♪ Ooooh the misery... ♫<br><b>" + n1 + " and "+ n2 + ":</b><br><b>" + n2 + ":</b> ♫ Oh oh ooooh... ♪"
                 case 30: // Credit: Admiral Adorable's OMORI Meme Dubs, Perchance Incorrect Quotes Generator
                     if (noswearing == true) {
-                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[3] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n + ":</b> Hopefully dead. I hated " + p3[3] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, curse you-"
+                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[2] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n2 + ":</b> Hopefully dead. I hated " + p3[2] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, curse you-"
                     } else {
-                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[3] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n + ":</b> Hopefully dead. I hated " + p3[3] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, fuck you-"
+                        return "*" + n1 + " and " + n2 + " find " + n3 + " on the ground with " + p3[2] + " eyes closed.<br><b>" + n1 + ":</b> Hey, is " + n3 + " sleeping or dead?<br><b>" + n2 + ":</b> Hopefully dead. I hated " + p3[2] + " guts.<br><b>" + n3 + ", getting up:</b> Okay first of all, fuck you-"
                     }
                 case 31: // Credit: ScatterPatter's Incorrect Quote Generator
                     if (noswearing == true) {
@@ -973,7 +1067,7 @@ function getQuote(choices) {
                         return "<b>" + n1 + ":</b> What happens if I press the accelerator and brake at the same time?<br><b>" + n2 + ":</b> The car takes a screenshot!<br><b>" + n3 + ":</b> For the last time, get the fuck out."
                     }
                 case 32: // Credit: ScatterPatter's Incorrect Quote Generator
-                    return "<b>" + n1 + ":</b> Here's a fun Christmas idea: We hang mistletoe, but instead of kissing, you have to FIGHT whoever else is under it.<br><b>" + n2 + ":</b> " + n1 + ", no.<br><b>" + n3 + ":</b> Mistlefoe!<br><b>" + n2 + ":</b> Please stop encouraging " + p3[1] + "."
+                    return "<b>" + n1 + ":</b> Here's a fun Christmas idea: We hang mistletoe, but instead of kissing, you have to FIGHT whoever else is under it.<br><b>" + n2 + ":</b> " + n1 + ", no.<br><b>" + n3 + ":</b> Mistlefoe!<br><b>" + n2 + ":</b> Please stop encouraging " + p3[3] + "."
                 
             }
         case 4:
@@ -982,9 +1076,9 @@ function getQuote(choices) {
                     return "<b>" + n1 + ":</b> *screams* <br><b>" + n2 + ":</b> *screams louder to establish dominance* <br><b>" + n3 + ":</b> Should we do something?<br><b>" + n4 + ":</b> Nah, I wanna see who wins."
                 case 1: // Credit: Admiral Adorable's OMORI Meme Dubs
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> Yesterday, " + n2 + " called me cute.<br><b>" + n3 + ":</b> " + p2[7] + " called me pretty. Why don't they use fancy words?<br><br><b>" + n2 + ", texting " + n4 + ":</b> How do you spell gorgoeuos?<br><b>" + n4 + ":</b> I have no hecking idea."
+                        return "<b>" + n1 + ":</b> Yesterday, " + n2 + " called me cute.<br><b>" + n3 + ":</b> " + capitalise(p2[1]) + " called me pretty. Why don't they use fancy words?<br><br><b>" + n2 + ", texting " + n4 + ":</b> How do you spell gorgoeuos?<br><b>" + n4 + ":</b> I have no hecking idea."
                     } else {
-                        return "<b>" + n1 + ":</b> Yesterday, " + n2 + " called me cute.<br><b>" + n3 + ":</b> " + p2[7] + " called me pretty. Why don't they use fancy words?<br><br><b>" + n2 + ", texting " + n4 + ":</b> How do you spell gorgoeuos?<br><b>" + n4 + ":</b> I have no fucking idea."
+                        return "<b>" + n1 + ":</b> Yesterday, " + n2 + " called me cute.<br><b>" + n3 + ":</b> " + capitalise(p2[1]) + " called me pretty. Why don't they use fancy words?<br><br><b>" + n2 + ", texting " + n4 + ":</b> How do you spell gorgoeuos?<br><b>" + n4 + ":</b> I have no fucking idea."
                     }
                 case 2: // Credit: Admiral Adorable's OMORI Meme Dubs
                     return "<b>" + n1 + ":</b> What's the hardest thing for you to say?<br><b>" + n2 + ":</b> I need help.<br><b>" + n3 + ":</b> I was wrong.<br><b>" + n4 + ":</b> Worcestershire sauce."
@@ -1038,13 +1132,13 @@ function getQuote(choices) {
         case 6:
             switch(parseInt(choices[1])) {
                 default: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "*A child starts crying in public.<br><b>" + n1 + ":</b> *tries to make the child laugh*<br><b>" + n2 + ":</b> *tries playing with the child to calm them down*<br><b>" + n3 + ":</b> *gives advice to the parents*<br><b>" + n4 + ":</b> *cries with the child*<br><b>" + n5 + ":</b> *ignore the child*<br><b>" + n6 + ":</b> *is the reason why the child is crying*"
+                    return "*A child starts crying in public.<br><b>" + n1 + ":</b> *tries to make the child laugh*<br><b>" + n2 + ":</b> *tries playing with the child to calm them down*<br><b>" + n3 + ":</b> *gives advice to the parents*<br><b>" + n4 + ":</b> *cries with the child*<br><b>" + n5 + ":</b> *ignores the child*<br><b>" + n6 + ":</b> *is the reason why the child is crying*"
                 
             }
         case 7:
             switch(parseInt(choices[1])){
                 default: // Credit: Admiral Adorable's OMORI Meme Dubs
-                    return "<b>" + n1 + ":</b> *Gets in " + p1[3] + " little clown car.*<br><b>" + n2 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n3 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n4 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n5 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n6 + ":</b> *Gets in with " + p1[1] + ".*<br><b>" + n7 + ":</b> *Gets in with " + p1[1] + ".*"
+                    return "<b>" + n1 + ":</b> *Gets in " + p1[2] + " little clown car.*<br><b>" + n2 + ":</b> *Gets in with " + p1[3] + ".*<br><b>" + n3 + ":</b> *Gets in with " + p1[3] + ".*<br><b>" + n4 + ":</b> *Gets in with " + p1[3] + ".*<br><b>" + n5 + ":</b> *Gets in with " + p1[3] + ".*<br><b>" + n6 + ":</b> *Gets in with " + p1[3] + ".*<br><b>" + n7 + ":</b> *Gets in with " + p1[3] + ".*"
                 
             }
         case 9:
@@ -1056,12 +1150,14 @@ function getQuote(choices) {
             switch(parseInt(choices[1])) {
                 default: // Credit: Me lol. I made this one myself.
                     if (noswearing == true) {
-                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Crap! Crap! Crap!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[3] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the HECK!?"
+                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Crap! Crap! Crap!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[2] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.*<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the HECK!?"
                     } else {
-                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Shit! Shit! Shit!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[3] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the FUCK!?"
+                        return "<b>" + n1 + ":</b> THE FLOOR IS LAVA!!!<br><b>" + n2 + ":</b> Oh no! *jumps on a bench*<br><b>" + n3 + ", climbing up a tree:</b> Shit! Shit! Shit!<br><b>" + n4 + ", sitting on the roof:</b> Well, this sucks...<br><b>" + n5 + ", sitting on a chair with " + p5[2] + " feet up:</b> Whatever...<br><b>" + n6 + ", sitting on a pillow on the floor:</b> Surely this counts as being safe, right?<br><b>" + n7 + ", squatting atop the fridge:</b> Not again!<br><b>" + n8 + ":</b> Yikes! *clings to the ceiling like Spider-Man.*<br><b>" + n9 + ", floating in mid-air:</b> Heh, you're all noobs.<br><b>" + n10 + ", lying on the floor:</b> Guess I'll die...<br><b>" + n3 + ", " + n4 + " and " + n7 + ":</b> " + n10 + ", what the FUCK!?"
                     }
 
             }
+        case 11:
+            return "ERROR: You have not enabled any number of characters! Please enable at least one number of characters and try again."
 
     }
 }
@@ -1120,5 +1216,39 @@ function getCensoredQuotes() {
         for (let i = 0; i < mentalquotesquotes[parseInt(choice[0]) - 1].length; i++) {
             censoredquotes.push(mentalquotesquotes[parseInt(choice[0]) - 1][i]);
         }
+    }
+}
+
+function capitalise(string) {
+    return string.charAt(0).toUpperCase + string.substring(1);
+}
+
+function editEnabledNumbers(changed) {
+    elementname = changed + "p";
+    if (document.getElementById(elementname).checked == true) {
+        enablednumbers.push(changed);
+    } else {
+        enablednumbers.splice(enablednumbers.indexOf(changed),1);
+    }
+}
+
+function checkPlurality(character, single, plural) { //character = character pronoun array, single = singular string, plural = plural string
+    if (character[0] == "Single") {
+        return single;
+    } else {
+        return plural;
+    }
+}
+
+function toggleCustomise(val) {
+    htmlclassname = "customise" + val
+    selected = document.getElementsByClassName(htmlclassname);
+
+    if (selected[0].classList.contains("closed") == true) {
+        selected[0].classList.remove("closed");
+        selected[1].classList.remove("closed");
+    } else {
+        selected[0].classList.add("closed");
+        selected[1].classList.add("closed");
     }
 }
